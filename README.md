@@ -99,3 +99,5 @@ CPU测试验证配置、声音缓存、视频请求、原始音轨拼接及末�
 参考录音自动选择：显式`reference_source_audio`优先，否则自动检查`assets/longmu/reference_audios/`和项目素材目录的`reference_audios/`；单个MP3从第一段起用于Base克隆。无MP3时才首次CustomVoice。`reference_source_text`或同名.txt为可选真实逐字文字，无文字用仅音色模式，不把第一段台词当参考文字。多个MP3须明确选择。
 
 `--stage video`缺少分段TTS时自动先生成配音，验证真实时长后再启动视频；已有但过期的缓存仍报错。更换参考录音或克隆模式使用新的`--output`目录。
+
+人物边讲边做单步动作：镜头设`shot_type="speaking_action"`，角色设`speech_mode="on_camera"`。该模式明确要求可见脸部的说话口型，并允许动作伴随视线、表情及自然肘腕/肩部变化。桌面近景未包含嘴时，同一人物可继续讲解，但无法看见口型。该模式不会自动改变参考图构图，实际同步质量需生成后检查。

@@ -1,0 +1,405 @@
+{
+  "planning_version": 1,
+  "project_id": "contact-lens-water-v1",
+  "status": "speaking_action_input_images_ready_timing_estimated_not_gpu_tested",
+  "runtime_ready": true,
+  "requested_total_seconds": 30,
+  "requested_segments": 4,
+  "source_mapping": [
+    {
+      "shot_id": 1,
+      "source_text": "洗澡、游泳前，记得先摘下隐形眼镜。让镜片远离水，是预防感染的重要习惯。",
+      "execution_text": "洗澡、游泳前，记得先摘下隐形眼镜。让镜片远离水，是预防感染的重要习惯。",
+      "changed": false
+    },
+    {
+      "shot_id": 2,
+      "source_text": "自来水不能用来冲洗或保存镜片。镜片接触水，可能增加眼部感染的风险。",
+      "execution_text": "自来水不能用来冲洗或保存镜片。镜片接触水，可能增加眼部感染的风险。",
+      "changed": false
+    },
+    {
+      "shot_id": 3,
+      "source_text": "需要清洁和消毒的镜片，应使用适用的护理产品。保存时使用新鲜护理液，不用水替代。",
+      "execution_text": "需要清洁和消毒的镜片，应使用适用的护理产品。保存时使用新鲜护理液，不用水替代。",
+      "changed": false
+    },
+    {
+      "shot_id": 4,
+      "source_text": "镜片和镜盒的清洁、消毒，要按产品说明和眼科专业人员的指导进行。",
+      "execution_text": "镜片和镜盒的清洁、消毒，要按产品说明和眼科专业人员的指导进行。",
+      "changed": false
+    }
+  ],
+  "assumptions": [
+    "沿用现有女性医生形象作为平台身份参考；不直接把空手旧图当新动作首帧",
+    "竖屏576×1024，医生边讲边做单步示意；四段台词原样保留",
+    "示教道具只是已盖好的物品展示，不演示镜片清洗、消毒、摘戴或镜盒使用后的晾干步骤"
+  ],
+  "voice": {
+    "mode": "imported_reference",
+    "source": "assets/reference_audios/reference_audio_1.mp3",
+    "original_source": "assets/longmu/reference_audios/reference_audio_1.mp3",
+    "reference_text": null,
+    "x_vector_only_mode": true,
+    "status": "已复制现有参考音频；未运行TTS",
+    "output": "runs/reference-audio-1"
+  },
+  "asset_requirements": [
+    {
+      "path": "assets/reference_images/0001.png",
+      "status": "present_user_supplied_viewed",
+      "shot_id": 1,
+      "role": "first_frame",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "5643b4fdbf9812e8b91617a5260ace1da96083ae24bc8b03fd85450746e17d73"
+    },
+    {
+      "path": "assets/reference_images/0002.png",
+      "status": "present_user_supplied_viewed",
+      "shot_id": 1,
+      "role": "target_last_frame",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "d15b95bc9e843f2ac70bf7c26c9d58489b946c99016d39facaddb4846dc36cc1"
+    },
+    {
+      "path": "assets/reference_images/0003.png",
+      "status": "present_user_supplied_viewed",
+      "shot_id": 3,
+      "role": "first_frame",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "341b47d593a0e8da9c84dd2e8289a3bd18552c65ff363cd10b79f3879b45c53b"
+    },
+    {
+      "path": "assets/reference_images/0004.png",
+      "status": "present_user_supplied_viewed",
+      "shot_id": 3,
+      "role": "target_last_frame",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "19c7bea24b4f2bcee3eb4299672320a6f2ea65d168162559d4dc8f4c823452a3"
+    }
+  ],
+  "existing_identity_reference": {
+    "path": "assets/reference_images/doctor_identity_reference.png",
+    "status": "not_present_not_used",
+    "use": "当前执行只使用用户提供的0001–0004，不依赖旧身份图片"
+  },
+  "object_registry": [
+    {
+      "object_id": "case_01",
+      "appearance": "单个白色双槽镜盒、两个蓝色圆形螺纹盖、始终盖好",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "initial_location": "第1段右手持盒",
+      "expected_end_state": "托盘中央平放，盖朝上"
+    },
+    {
+      "object_id": "bottle_01",
+      "appearance": "单个不透明白色护理液示教瓶、白盖、无文字，始终盖好",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "initial_location": "第1、2段托盘旁桌面；切到第3段时已由左手持握",
+      "expected_end_state": "托盘右侧直立放稳"
+    },
+    {
+      "object_id": "tray_01",
+      "appearance": "浅米色矩形浅托盘",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "initial_location": "桌面",
+      "expected_end_state": "保持桌面原位"
+    }
+  ],
+  "action_review": [
+    {
+      "shot_id": 1,
+      "operator_hand": "人物自身右手",
+      "initial_state": "已持镜盒，瓶在托盘旁",
+      "main_action": "放镜盒到托盘中央",
+      "end_state": "镜盒在托盘中央受支撑，右手仍轻触盒旁，与0002一致",
+      "completion_visible": "盒底完整接触托盘且双盖向上",
+      "target_last_frame_required": true
+    },
+    {
+      "shot_id": 2,
+      "operator_hand": "人物自身右手",
+      "initial_state": "继承第1段实际末帧",
+      "main_action": "先释放剩余右手接触，再自然收回",
+      "end_state": "道具原位、右手回到身体侧面",
+      "target_last_frame_required": false
+    },
+    {
+      "shot_id": 3,
+      "operator_hand": "人物自身左手",
+      "initial_state": "明确切镜后已持同一瓶，镜盒仍在中央；取瓶步骤不展示",
+      "main_action": "放瓶到托盘右侧",
+      "end_state": "瓶子在托盘右侧直立受支撑，左手仍轻触瓶身，与0004一致",
+      "completion_visible": "瓶底受托盘支撑、镜盒仍在中央",
+      "target_last_frame_required": true
+    },
+    {
+      "shot_id": 4,
+      "operator_hand": "人物自身左手",
+      "initial_state": "继承第3段实际末帧",
+      "main_action": "先松开左手，再自然收回",
+      "end_state": "保持瓶、镜盒和托盘位置，自然结束",
+      "target_last_frame_required": false
+    }
+  ],
+  "stitch_plan": {
+    "runtime_consumed": false,
+    "components": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "max_concurrent_video_gpus": 2,
+    "joins": [
+      {
+        "from_shot": 1,
+        "to_shot": 2,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ],
+        "end_start_relation": "第2段取第1段生成视频实际末帧，不用指定目标图直接代替实际末帧"
+      },
+      {
+        "from_shot": 2,
+        "to_shot": 3,
+        "type": "intentional_cut",
+        "reason": "中景切固定桌面近景；左手持瓶状态在新首图中已成立，不在同一镜头内凭空换手或拿瓶"
+      },
+      {
+        "from_shot": 3,
+        "to_shot": 4,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ],
+        "end_start_relation": "第4段取第3段实际末帧"
+      },
+      {
+        "from_shot": 4,
+        "to_shot": null,
+        "type": "final",
+        "reason": "简短自然结束"
+      }
+    ],
+    "reference_modes": [
+      {
+        "shot_id": 1,
+        "mode": "first_and_last_frames",
+        "first_image": "reference_images/0001.png",
+        "continue_from": null,
+        "last_image": "reference_images/0002.png"
+      },
+      {
+        "shot_id": 2,
+        "mode": "first_frame_only",
+        "first_image": null,
+        "continue_from": 1,
+        "last_image": null
+      },
+      {
+        "shot_id": 3,
+        "mode": "first_and_last_frames",
+        "first_image": "reference_images/0003.png",
+        "continue_from": null,
+        "last_image": "reference_images/0004.png"
+      },
+      {
+        "shot_id": 4,
+        "mode": "first_frame_only",
+        "first_image": null,
+        "continue_from": 3,
+        "last_image": null
+      }
+    ]
+  },
+  "timing_review": {
+    "basis": "estimated_not_measured",
+    "default_lead_seconds": 0.08,
+    "minimum_tail_seconds": 0.16,
+    "tts_internal_silence_checked": false,
+    "automatic_tail_trim_supported": false,
+    "action": "TTS实测后核对补齐留白；超过0.5秒检查节奏、超过1秒重分段或标记剪辑需求；不截断语音或裁掉用于续接的实际末帧",
+    "estimated_details_file": "review_ready/review.json",
+    "estimated_total_video_seconds": 29.875,
+    "shots": [
+      {
+        "id": 1,
+        "timing_basis": "estimated_not_measured",
+        "speech_seconds": 6.666666666666667,
+        "frames": 175,
+        "video_seconds": 7.291666666666667,
+        "padded_tail_seconds": 0.5449999999999999,
+        "reference_mode": "first_and_last_frames",
+        "has_target_last_frame": true
+      },
+      {
+        "id": 2,
+        "timing_basis": "estimated_not_measured",
+        "speech_seconds": 6.666666666666667,
+        "frames": 175,
+        "video_seconds": 7.291666666666667,
+        "padded_tail_seconds": 0.5449999999999999,
+        "reference_mode": "first_frame_only",
+        "has_target_last_frame": false
+      },
+      {
+        "id": 3,
+        "timing_basis": "estimated_not_measured",
+        "speech_seconds": 7.777777777777778,
+        "frames": 209,
+        "video_seconds": 8.708333333333334,
+        "padded_tail_seconds": 0.8505555555555562,
+        "reference_mode": "first_and_last_frames",
+        "has_target_last_frame": true
+      },
+      {
+        "id": 4,
+        "timing_basis": "estimated_not_measured",
+        "speech_seconds": 6.222222222222222,
+        "frames": 158,
+        "video_seconds": 6.583333333333333,
+        "padded_tail_seconds": 0.28111111111111065,
+        "reference_mode": "first_frame_only",
+        "has_target_last_frame": false
+      }
+    ],
+    "estimated_risks": [
+      "项目共用一套声音；字数估算不代表TTS实测；画面/道具/操作准确性仍需看图和试生成。",
+      "首尾帧的身份、姿态可达性、裁切与操作准确性未自动校验；音频缓存通过也不代表画面审核通过。",
+      "镜头1补齐尾部静音约0.545秒（不含TTS文件自身静音）；检查短句合并/拼接节奏，当前compose不会自动裁剪。",
+      "镜头2补齐尾部静音约0.545秒（不含TTS文件自身静音）；检查短句合并/拼接节奏，当前compose不会自动裁剪。",
+      "镜头3补齐尾部静音约0.851秒（不含TTS文件自身静音）；检查短句合并/拼接节奏，当前compose不会自动裁剪。",
+      "镜头3同角色重新使用独立首帧；确认这是明确切镜，否则有姿态复位/形象跳变风险。"
+    ]
+  },
+  "review_policy": {
+    "during_generation": "automatic_no_manual_frame_gate",
+    "after_generation": "full_video_and_flagged_clips",
+    "input_asset_review": "before_generation",
+    "runtime_consumed": false
+  },
+  "medical_sources": [
+    {
+      "url": "https://www.cdc.gov/contact-lenses/prevention/",
+      "title": "CDC Preventing Eye Infections When Wearing Contacts",
+      "verified_on": "2026-10-08",
+      "supports": [
+        "洗澡/游泳前摘镜",
+        "使用适用的护理液，保存用新鲜护理液，不用水",
+        "遵循眼科专业指导"
+      ]
+    },
+    {
+      "url": "https://www.cdc.gov/contact-lenses/about/healthy-habits-keeping-water-away-from-contact-lenses.html",
+      "title": "CDC Keeping Water Away from Contact Lenses",
+      "supports": [
+        "镜片接触水可能增加感染风险"
+      ]
+    }
+  ],
+  "unsupported_requirements": [
+    "当前不自动检测/裁剪TTS内部静音或补齐尾部",
+    "目标尾图及文字不保证动作轨迹、手部细节或帧级准确落点",
+    "Seedance图片由用户平台生成后导入，不自动调用平台",
+    "现有0003/0004未包含嘴，不能在保持近景时展示口型；新增口播动作模式的实际同步质量仍需服务器验证"
+  ],
+  "validation": {
+    "actual_validator": "passed_with_actual_image_files",
+    "status": "project_validated_timing_estimated",
+    "review": "review_ready/review.json",
+    "image_review": "human_style_assistant_visual_review_before_generation",
+    "tts_measured": false,
+    "gpu_video_generated": false,
+    "notes": "真实图片输入与speaking_action配置通过，口型效果、动作质量和实测TTS预算未验证",
+    "cpu_tests_passed": 43
+  },
+  "reference_image_generation": {
+    "method": "edit_actual_start_frame_locally",
+    "provider": "用户Seedance平台",
+    "first_frame_candidate": "assets/reference_images/0001.png",
+    "candidate_status": "user_supplied_actual_start_frame",
+    "rejected_pair_reason": "用户示例首尾图机位、人物朝向、桌面透视、非动作物体不一致，不适合作为固定镜头双帧",
+    "steps": [
+      "确定首图",
+      "上传实际首图，局部编辑得到同构图尾图",
+      "输入图片对比合格后启用last_image",
+      "另起近景组时才裁切/重设构图，再固定新首图编辑其尾图"
+    ],
+    "fallback": "局部编辑仍不匹配时取消对应last_image目标，并同步修改action后重新预览",
+    "runtime_consumed": false,
+    "current_pair_review": {
+      "status": "viewed_before_generation",
+      "pairs": [
+        [
+          "0001.png",
+          "0002.png"
+        ],
+        [
+          "0003.png",
+          "0004.png"
+        ]
+      ],
+      "observations": [
+        "第一组主体、背景、桌面与道具构图基本一致，右手将镜盒放入托盘",
+        "第二组是明确近景切镜，瓶子从悬空持握变为在托盘右侧受支撑",
+        "0002与0004仍有手指接触物体，已把下一镜动作改为先释放接触再收回",
+        "首尾图一致性不能保证生成视频中间轨迹与手部准确"
+      ],
+      "video_quality_verified": false
+    }
+  },
+  "presentation": {
+    "speaker": "doctor herself",
+    "speech_mode": "on_camera",
+    "shot_type": "speaking_action",
+    "visible_lips_in_shots": [
+      1,
+      2
+    ],
+    "face_outside_crop_in_shots": [
+      3,
+      4
+    ],
+    "notes": "第3/4段同一医生继续讲话，但现有近景图片未包含嘴，不能呈现可见口型；若每段都要看嘴需另备脸部可见的匹配图片。",
+    "prompt_only_not_verified_on_gpu": true
+  }
+}

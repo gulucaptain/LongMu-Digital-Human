@@ -1,0 +1,28 @@
+隐形眼镜远离水｜医生边讲边示范测试
+
+当前输入图已导入并看图核对，参考路径为：
+第1段：首图assets/reference_images/0001.png，目标尾图assets/reference_images/0002.png，首尾双帧。
+第2段：continue_from=1，自动取第1段实际视频末帧，单首帧；不直接用0002代替实际视频末帧。
+第3段：首图assets/reference_images/0003.png，目标尾图assets/reference_images/0004.png，首尾双帧。
+第4段：continue_from=3，自动取第3段实际视频末帧，单首帧。
+
+1→2、3→4为两组续接组件，可用两张GPU；2→3是明确的中景转近景切镜。0002、0004中手仍接触已受托盘支撑的物体，action已同步：第一/第三段先放稳，第二/第四段再释放接触并收回。台词未修改，统一on_camera和speaking_action，由医生本人边讲边示范；第1/2段明确有口型、视线/表情及自然身体动作。第3/4段现有图片裁掉了脸，仍是同一医生继续讲解，但无法看到嘴；若四段都需可见口型，需补相应首尾中景图。
+
+已有参考录音assets/reference_audios/reference_audio_1.mp3。没有逐字文字时使用仅音色克隆，从第一段开始用Base生成。服务器需同步图片和音频，且configs/runtime.example.toml必须指向实际模型和环境。
+
+在服务器仓库根目录执行：
+python longmu-script-planner/scripts/prepare_project.py --repo . --project scripts/contact-lens-water-v1/project.json --config configs/runtime.example.toml --preview-dir scripts/contact-lens-water-v1/review_ready
+python -m longmu run --project scripts/contact-lens-water-v1/project.json --config configs/runtime.example.toml --output scripts/contact-lens-water-v1/runs/reference-audio-1 --stage tts
+python longmu-script-planner/scripts/prepare_project.py --repo . --project scripts/contact-lens-water-v1/project.json --config configs/runtime.example.toml --output scripts/contact-lens-water-v1/runs/reference-audio-1 --use-audio --preview-dir scripts/contact-lens-water-v1/review_measured
+python -m longmu run --project scripts/contact-lens-water-v1/project.json --config configs/runtime.example.toml --output scripts/contact-lens-water-v1/runs/reference-audio-1 --stage video --gpus 0,1
+
+新输出目录可直接stage video，代码会先补齐缺少的TTS。已有配音缓存过期时单独重做TTS；已有视频因图片/action修改过期时，在同一输出目录使用stage video --force，仅重做视频，避免all --force重复配音。
+
+review_ready为真实输入检查及字数估算预览，不是GPU质量验证。估算总长29.875秒，补齐尾部约0.545、0.545、0.851、0.281秒，不含TTS自身静音。TTS实测后重点复核留白及预算，当前不会自动裁除静音。生成中自动续接，整片完成后统一检查动作、人物/道具连续性、音频和字幕。
+
+注意.gitignore会排除参考图片和录音；仅git push不会把这些素材同步到服务器，需要单独传输或使用包含素材的项目包。
+
+本次新增代码模式speaking_action，服务器需同步longmu/project.py及longmu/stages/video.py，否则旧校验器会拒绝。已生成旧旁白视频必须重新生成；同一声音和台词未变时可复用已有TTS。
+推荐在原配音目录执行：
+python -m longmu run --project scripts/contact-lens-water-v1/project.json --config configs/runtime.example.toml --output scripts/contact-lens-water-v1/runs/reference-audio-1 --stage video --gpus 0,1 --force
+此处force只重做视频，不使用all --force。

@@ -2,7 +2,7 @@ from longmu.context import settings as S
 from longmu.cache import read_json
 
 
-SHOT_TYPES = {'talking_head', 'simple_action'}
+SHOT_TYPES = {'talking_head', 'simple_action', 'speaking_action'}
 
 
 def shot_type(shot, character):
@@ -49,7 +49,9 @@ def load_plan():
             raise ValueError(f'未知角色：{shot["scene"]}')
         kind = shot_type(shot, characters[shot['scene']])
         if not isinstance(kind, str) or kind not in SHOT_TYPES:
-            raise ValueError('shot_type需要talking_head或simple_action')
+            raise ValueError('shot_type需要talking_head、simple_action或speaking_action')
+        if kind == 'speaking_action' and characters[shot['scene']]['speech_mode'] != 'on_camera':
+            raise ValueError('speaking_action使用on_camera，由画面人物本人讲解并执行单步动作')
         if kind == 'simple_action' and characters[shot['scene']]['speech_mode'] != 'voiceover':
             raise ValueError('simple_action使用voiceover，避免操作与口播动作约束冲突')
         for name in ('first_image','last_image'):

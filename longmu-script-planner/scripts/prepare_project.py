@@ -75,10 +75,20 @@ def prepare(repo, project, runtime=None, output=None, use_audio=False):
                 except ValueError as error:
                     frames = None
                     warnings.append(f'镜头{shot["id"]}估算超预算：{error}')
+            padded_tail = max(0.0, frames/config.FPS-config.AUDIO_LEAD_SECONDS-seconds) if frames else None
+            if padded_tail is not None and padded_tail > 0.5:
+                warnings.append(f'镜头{shot["id"]}补齐尾部静音约{padded_tail:.3f}秒（不含TTS文件自身静音）；检查短句合并/拼接节奏，当前compose不会自动裁剪。')
+            if rows and shot['first_image'] and rows[-1]['scene'] == shot['scene']:
+                warnings.append(f'镜头{shot["id"]}同角色重新使用独立首帧；确认这是明确切镜，否则有姿态复位/形象跳变风险。')
             rows.append(dict(id=shot['id'], scene=shot['scene'], shot_type=shot_type(shot, plan['characters'][shot['scene']]), text=shot['text'], action=shot['action'],
                              speech_mode=plan['characters'][shot['scene']]['speech_mode'],
                              first_image=shot['first_image'], continue_from=shot['continue_from'],
-                             last_image=shot['last_image'], han_characters=han, timing_basis=basis,
+                             last_image=shot['last_image'],
+                             reference_mode='first_and_last_frames' if shot['last_image'] is not None else 'first_frame_only',
+                             has_target_last_frame=shot['last_image'] is not None,
+                             audio_lead_seconds=config.AUDIO_LEAD_SECONDS, padded_tail_seconds=padded_tail,
+                             tts_internal_silence_checked=False,
+                             han_characters=han, timing_basis=basis,
                              speech_seconds=seconds, frames=frames,
                              video_seconds=frames / config.FPS if frames else None,
                              prompt=make_prompt(shot, frames, seconds, shot['last_image'] is not None, plan)
@@ -89,7 +99,10 @@ def prepare(repo, project, runtime=None, output=None, use_audio=False):
                     status=('audio_cache_validated' if use_audio else 'project_validated_timing_estimated')
                         if all(row['frames'] for row in rows) else 'needs_resegmentation',
                     visual_review_required=True,
-                    single_voice=True, audio_budget_seconds=maximum-config.AUDIO_LEAD_SECONDS-config.AUDIO_TAIL_SECONDS,
+                    single_voice=True, automatic_tail_trim_supported=False,
+                    total_padded_tail_seconds=sum(row['padded_tail_seconds'] or 0 for row in rows)
+                        if all(row['frames'] for row in rows) else None,
+                    audio_budget_seconds=maximum-config.AUDIO_LEAD_SECONDS-config.AUDIO_TAIL_SECONDS,
                     total_video_seconds=sum(row['video_seconds'] or 0 for row in rows)
                         if all(row['frames'] for row in rows) else None,
                     warnings=warnings, shots=rows)

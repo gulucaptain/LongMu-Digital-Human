@@ -9,7 +9,7 @@
 | 口播/旁白 | characters.<key>.speech_mode | on_camera / voiceover，角色级别，仍共用项目声音 |
 | 台词 | shots[].text | 实际TTS及声音提示 |
 | 当前角色 | shots[].scene | characters的键，不是地点 |
-| 镜头类型 | shots[].shot_type | talking_head / simple_action；后者需角色voiceover，省略按speech_mode推导 |
+| 镜头类型 | shots[].shot_type | talking_head / simple_action / speaking_action；simple_action需voiceover，speaking_action需on_camera；省略按speech_mode推导 |
 | 主动作 | shots[].action | 进入视觉提示，推荐简明英文 |
 | 字幕要点 | shots[].keypoint | 后期叠加，不控制模型 |
 | 首帧 | shots[].first_image | 相对asset_root，与continue_from二选一 |
@@ -26,9 +26,9 @@ schema_version=1；project_id、characters、非空shots必填。每镜包含id�
 
 speech.py首段复用分支仅限origin.mode=bootstrap_first_clip；外部录音即使文字与第一镜相同也重新克隆。没有外部参考文字时传ref_text=None及x_vector_only_mode=True，不用第一镜文字冒充。video阶段自动补齐缺失配音后校验，再启动GPU视频任务；过期缓存仍明确报错。
 
-24fps、尺寸32倍数；帧数17n+5向上对齐。默认5–10秒实际为124/141/158/175/192/209/226帧，5.167至9.417秒，默认首尾静音0.24秒，配音上限约9.177秒。真实预算调用longmu.media.audio.aligned_frames，不按字数确定最终帧数。
+24fps、尺寸32倍数；帧数17n+5向上对齐。默认5–10秒实际为124/141/158/175/192/209/226帧，5.167至9.417秒，默认首尾静音0.24秒，配音上限约9.177秒。真实预算调用longmu.media.audio.aligned_frames，不按字数确定最终帧数。speech_seconds为TTS文件时长，包含文件内部静音；补齐尾部=frames/fps-audio_lead_seconds-speech_seconds。默认尾部0.16秒不是总尾部留白上限。当前compose保留全部帧，没有自动去静音或按剪辑结束帧续接。具体规划见[拼接节奏与首尾帧设计](stitching-and-keyframes.md)。
 
-视频用FL2VA首尾帧加retake_audio音频保留模式联合生成，再配回TTS。口型并非严格保证；不能为绕过报错改用纯后期配音并声称驱动有效。make_prompt固定机位、无剪切变焦；talking_head保持轻微表演，simple_action执行明确单步已有道具动作，不套用口播手部限制。精细操作仍未自动校验。正文前有首尾图时间对应行；台词在integrated段、保留音频说明在overall_soundscape段。音乐混音和外部实拍插入不是当前compose接口。
+视频用FL2VA关键帧加retake_audio音频保留模式联合生成：last_image=null传[0]单首帧，指定目标图或same_as_start传[0,-1]首尾双帧；continue_from只决定首帧来源，也可与目标尾帧并用。日志/元数据统一的“首尾帧”标签不能证明用了双帧。再配回TTS。口型并非严格保证；不能为绕过报错改用纯后期配音并声称驱动有效。make_prompt固定机位、无剪切变焦；talking_head保持轻微表演，simple_action执行明确单步已有道具动作，不套用口播手部限制。speaking_action组合人物本人讲话口型与单步道具动作，允许自然视线、表情和肘腕/肩部变化，不套用旁白沉默或talking_head放松双手限制；脸在画面外时不改变构图来制造口型。精细操作仍未自动校验。正文前有首尾图时间对应行；台词在integrated段、保留音频说明在overall_soundscape段。音乐混音和外部实拍插入不是当前compose接口。
 
 ```bash
 python -m longmu plan --project scripts/my-course/project.json

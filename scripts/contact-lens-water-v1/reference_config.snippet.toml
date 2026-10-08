@@ -1,0 +1,3 @@
+# 可选显式选择；路径假设配置在仓库configs/。文字可选，留空配置项请保持注释。
+reference_source_audio = "../scripts/contact-lens-water-v1/assets/reference_audios/reference_audio_1.mp3"
+# reference_source_text = "必须对应真实参考录音的逐字文字，不能填本剧本台词"

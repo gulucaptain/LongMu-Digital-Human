@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "project_id": "contact-lens-water-v1",
+  "title": "隐形眼镜为什么要远离水？（医生边讲边示范）",
+  "asset_root": "assets",
+  "characters": {
+    "doctor": {
+      "description": "the same Chinese female eye-care doctor, dark hair tied back, wearing the same white coat over a light-blue shirt in the bright consultation room; she personally explains the topic while handling the supplied props, with framing and hand state following each supplied image",
+      "speech_mode": "on_camera"
+    }
+  },
+  "visual_constraints": "Live-action eye-care education with the same doctor personally speaking while demonstrating. Whenever her face is visible, show speech-driven mouth and jaw articulation, natural gaze and expression changes, and small coordinated body movements. Keep character identity, clothing, lighting and existing prop appearance consistent; stability applies to identity and unhandled objects, not to freezing the actor. The props are one closed white lens case with two blue caps, one capped plain white bottle and one beige tray. Hands interact with their exterior surfaces; caps remain closed. The camera is fixed within each shot. The medium-to-table-close-up cut occurs between shots 2 and 3; in shots 3 and 4 the same doctor keeps speaking with her face outside the supplied crop. Preserve input audio and spoken text. Captions are added in post-production.",
+  "notice": "",
+  "settings": {
+    "width": 576,
+    "height": 1024,
+    "fps": 24,
+    "min_video_seconds": 5,
+    "max_video_seconds": 10,
+    "audio_lead_seconds": 0.08,
+    "audio_tail_seconds": 0.16,
+    "tts_language": "Chinese",
+    "tts_tempo": 1.0,
+    "burn_subtitles": true,
+    "show_keypoints": false,
+    "save_progress_after_each_clip": true
+  },
+  "shots": [
+    {
+      "id": 1,
+      "text": "洗澡、游泳前，记得先摘下隐形眼镜。让镜片远离水，是预防感染的重要习惯。",
+      "scene": "doctor",
+      "shot_type": "speaking_action",
+      "first_image": "reference_images/0001.png",
+      "continue_from": null,
+      "last_image": "reference_images/0002.png",
+      "action": "Start from 0001's medium framing with the doctor's own right hand already supporting the white twin-well lens case with two closed blue caps above the beige tray. She speaks the supplied explanation with visible, naturally articulated mouth and jaw movements, engaged eye contact and gentle facial expression changes. Briefly lower her gaze toward the tray as she places that same case flat at its center, then return her gaze toward the viewer while continuing her sentence. Let the right elbow and wrist follow the placement naturally, with small shoulder and breathing movements. Keep the capped plain white bottle upright beside the tray and the left hand in its existing relaxed position. Near the final frame, match 0002's placed-case state: the tray supports the case and the right fingertips still lightly contact its side. Preserve the two closed caps and the same case shape. Use the target's facial expression at the ending instant; continue mouth articulation throughout the actual voiced interval rather than keeping the reference smile fixed.",
+      "keypoint": "洗澡、游泳前摘镜"
+    },
+    {
+      "id": 2,
+      "text": "自来水不能用来冲洗或保存镜片。镜片接触水，可能增加眼部感染的风险。",
+      "scene": "doctor",
+      "shot_type": "speaking_action",
+      "first_image": null,
+      "continue_from": 1,
+      "last_image": null,
+      "action": "Continue directly from the preceding actual final frame. The doctor herself keeps explaining to the viewer, with clear speaking lips and jaw movements and an attentive, naturally changing expression. The case is already supported by the tray. Release the remaining right-finger contact and withdraw the right hand in a smooth, readable movement toward her side, with a relaxed wrist, elbow and small accompanying shoulder movement. Maintain natural breathing and a brief conversational gaze shift before resuming viewer eye contact. Keep the placed case and capped bottle in their current positions. Carry the explanation and living posture forward without a still-photo hold, a new closing gesture or resetting to the case-holding pose.",
+      "keypoint": "镜片远离水"
+    },
+    {
+      "id": 3,
+      "text": "需要清洁和消毒的镜片，应使用适用的护理产品。保存时使用新鲜护理液，不用水替代。",
+      "scene": "doctor",
+      "shot_type": "speaking_action",
+      "first_image": "reference_images/0003.png",
+      "continue_from": null,
+      "last_image": "reference_images/0004.png",
+      "action": "Begin after the planned cut to the supplied fixed table-and-hands close-up 0003. The doctor herself continues the same explanation while her face stays outside this framing. Her own left hand already holds the closed plain white solution bottle above the tray's right side. Gently guide the same bottle from its slight starting tilt toward upright while lowering it onto the tray's right side. Show a readable continuous movement of the left forearm, wrist and fingers, and small natural breathing movement in the visible coat and torso. The white twin-well lens case with two closed blue caps stays at the tray center. Arrive near the last frame at 0004's supported-bottle state: the bottle stands on its base and the left fingers still lightly contact its body. The right hand retains its starting position. Keep the original close-up; this is the doctor's continued spoken demonstration, not a separate narrator's presentation.",
+      "keypoint": "使用适用护理产品"
+    },
+    {
+      "id": 4,
+      "text": "镜片和镜盒的清洁、消毒，要按产品说明和眼科专业人员的指导进行。",
+      "scene": "doctor",
+      "shot_type": "speaking_action",
+      "first_image": null,
+      "continue_from": 3,
+      "last_image": null,
+      "action": "Continue from shot 3's actual final frame with the same table-and-hands close-up. The doctor herself continues the final explanation. With the bottle already supported upright by the tray, visibly relax and open the left-hand grip, then withdraw the left hand toward her body in a smooth, natural movement. Allow small wrist and elbow adjustments and gentle breathing movement in the visible torso and sleeve. The closed bottle stays at the tray's right side and the closed two-blue-cap case stays at its center. Finish naturally with continuing relaxed posture, without an extra prolonged static hold. Preserve the close-up rather than introducing a new facial framing.",
+      "keypoint": "按说明及专业指导护理"
+    }
+  ]
+}

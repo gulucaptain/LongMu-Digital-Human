@@ -75,6 +75,22 @@ def make_prompt(shot, frames, speech_seconds, has_end, plan=None):
     performance = ('During speech use only subtle natural head movements and relaxed hands, consistent with the stated action.'
                    if shot_type(shot, character) == 'talking_head' else
                    'Perform only the stated single demonstration action in a smooth, physically plausible sequence from the supplied initial state to the stated end state. Move existing props only as required by that action; do not add extra procedure steps. This is a voiceover demonstration, not an on-camera speech performance.')
+    if shot_type(shot, character) == 'speaking_action':
+        speaking = ('The doctor herself delivers the supplied dialogue while performing the stated action. '
+                    'Whenever her face is visible, show clear natural articulating lips and jaw movements synchronized '
+                    'with the voiced portions of the supplied audio. In close-ups where her face is outside the crop, '
+                    'the same doctor continues her explanation; preserve the planned framing. (S1) says:')
+        performance = ('Coordinate the stated single prop action with engaged speech: natural breathing, small shoulder '
+                       'and elbow adjustments, a responsive wrist, and brief gaze shifts between the task and viewer '
+                       'where the face is visible. Keep hand movement readable and physically grounded. '
+                       'Let the doctor remain naturally alive throughout the shot rather than freezing her body while '
+                       'only the prop moves. Preserve the supplied audio timing; animate the mouth only during voiced '
+                       'speech, not during silence. Keep to the stated task without extra procedure steps.')
+        ending = ('Arrive at the supplied target hand-and-prop state near the final frame without reaching it early '
+                  'and waiting motionless. Keep facial articulation responsive through the actual voiced interval; '
+                  'the target facial expression belongs to the ending instant, not the whole clip.' if has_end else
+                  'Carry natural breathing and responsive posture through the end. Finish the stated movement smoothly '
+                  'without a separate staged still-photo hold or farewell gesture.')
     references = 'For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.'
     if has_end:
         references += f' At {(frames-1)/S.FPS:.2f} seconds into the target video, <Picture 2> (from [Shot 1]) is fully referenced.'

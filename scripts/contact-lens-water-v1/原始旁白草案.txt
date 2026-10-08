@@ -1,0 +1,22 @@
+《隐形眼镜为什么要远离水？》
+目标约30秒，4段，统一画外旁白。台词未改写。
+
+第1段｜洗澡、游泳前摘镜
+台词：洗澡、游泳前，记得先摘下隐形眼镜。让镜片远离水，是预防感染的重要习惯。
+画面：Begin in the supplied medium-shot pose. The doctor already holds the single white twin-well contact lens case with two blue round screw caps, both securely closed level in her own right hand, supporting its underside with her fingers. Her left hand remains relaxed at her side. In one smooth continuous placement movement, she lowers that same closed case to the center of the shallow beige rectangular tray. Keep both blue caps facing upward and the case shape unchanged. Complete placement near the end of the shot: the flat base rests fully on the tray, her right fingers have just released it and remain beside it. Reach the supplied target last-frame state without an extra prolonged motionless hold. the single plain white opaque contact lens solution demonstration bottle with its white cap securely closed stays upright beside the tray. Where her face is visible, her lips stay comfortably closed; she breathes naturally and blinks.
+参考：首尾双帧
+
+第2段｜镜片远离水
+台词：自来水不能用来冲洗或保存镜片。镜片接触水，可能增加眼部感染的风险。
+画面：Begin from the actual final frame of shot 1. Preserve the visible case, both closed blue caps, tray, bottle, framing and current right-hand position. The doctor gently withdraws her own right hand from beside the case toward her side in one relaxed movement. The case remains flat at the tray center; the closed bottle remains upright beside the tray. Maintain subtle natural breathing and blinking where the face is visible, with lips comfortably closed. Carry the state forward without resetting to the original case-holding pose or adding a separate farewell nod.
+参考：上一段实际尾帧作为单首帧（continue_from=1）
+
+第3段｜使用适用护理产品
+台词：需要清洁和消毒的镜片，应使用适用的护理产品。保存时使用新鲜护理液，不用水替代。
+画面：This shot begins after an intentional cut to a fixed close-up of the table and the doctor's hands. In the supplied first frame her own left hand already holds the single plain white opaque contact lens solution demonstration bottle with its white cap securely closed upright around its body above the right side of the shallow beige rectangular tray; the pickup is not part of this shot. Her right hand stays relaxed outside the working area. the single white twin-well contact lens case with two blue round screw caps, both securely closed remains flat at the tray center. In one continuous movement she lowers the same capped bottle vertically onto the right side of the tray, leaving the case untouched. Complete placement near the end: the bottle base is fully supported by the tray, the bottle stands upright and her left fingers have just released it beside its body. Reach the supplied target last-frame state without an extra prolonged motionless hold. The visible person is silent.
+参考：首尾双帧
+
+第4段｜按说明及专业指导护理
+台词：镜片和镜盒的清洁、消毒，要按产品说明和眼科专业人员的指导进行。
+画面：Begin from the actual final frame of shot 3 with the same fixed close-up. Preserve the upright capped white bottle at the right side of the beige tray and the closed white twin-well case at the center. The doctor gently withdraws her own left hand from beside the bottle toward her body in one natural movement. Her right hand retains its visible starting position. The props stay supported in their final positions. Finish the explanation with a short natural ending rather than a staged still-photo pause; do not add a separate gesture. The visible person is silent.
+参考：上一段实际尾帧作为单首帧（continue_from=3）

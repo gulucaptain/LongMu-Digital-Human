@@ -1,0 +1,1 @@
+本目录draft_review.json是图片导入前的历史草案预览，缺图状态和旧文件名已过时。当前执行请使用project.json及review_ready/review.json，四张实际图片为0001–0004.png。

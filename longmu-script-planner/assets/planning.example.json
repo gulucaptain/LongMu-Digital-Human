@@ -103,5 +103,61 @@
       "expected_end_state": "电脑保持桌面原位；人物完成转头并保持姿势",
       "runtime_consumed": false
     }
-  ]
+  ],
+  "stitch_plan": {
+    "runtime_consumed": false,
+    "joins": [
+      {
+        "from_shot": 1,
+        "to_shot": 2,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ],
+        "reason": "继续同一讲解，不重置肖像或长时间收尾静止"
+      },
+      {
+        "from_shot": 2,
+        "to_shot": 3,
+        "type": "intentional_cut",
+        "reason": "换人物和场景，明确切镜"
+      }
+    ],
+    "reference_modes": [
+      {
+        "shot_id": 1,
+        "mode": "first_frame_only",
+        "target_last_image": null
+      },
+      {
+        "shot_id": 2,
+        "mode": "first_frame_only",
+        "target_last_image": null
+      },
+      {
+        "shot_id": 3,
+        "mode": "first_frame_only",
+        "target_last_image": null
+      }
+    ],
+    "optional_two_frame_candidate": {
+      "shot_id": 3,
+      "reason": "若需控制转头结束方向，可准备同一患者面向窗户的目标尾图",
+      "target_last_image": "reference_images/patient_window_end.png",
+      "status": "missing_not_enabled_in_project",
+      "provider": "Seedance平台",
+      "runtime_consumed": false
+    }
+  },
+  "timing_review": {
+    "basis": "estimated_not_measured",
+    "padded_tail_seconds": "由prepare_project.py报告；TTS自身静音需另核对",
+    "continuous_join_pause_target_seconds": [
+      0.2,
+      0.5
+    ],
+    "long_padding_action": "合并相邻短句或重分段；剪辑裁剪及保留结束帧续接目前未实现",
+    "runtime_consumed": false
+  }
 }

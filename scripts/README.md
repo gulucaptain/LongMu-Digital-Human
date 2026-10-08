@@ -7,6 +7,7 @@
 | [dry-eye](dry-eye/剧本.txt) | 干眼与视疲劳教育讲解 | 原示例迁入；共用主素材库 |
 | [eye-drops-education-v1](eye-drops-education-v1/剧本.txt) | 滴眼药水：医生讲解与准备步骤示意 | 已校验输入；未运行模型；精细滴药素材待修正 |
 | [dry-eye-nutrition-ep04-v1](dry-eye-nutrition-ep04-v1/原稿与执行台词.txt) | 第4集干眼饮食与鱼油：6段讲解版及6段交互旁白草案 | 讲解版已校验；交互版待3张首帧；参考音频逐字文字待补；未运行模型 |
+| [contact-lens-water-v1](contact-lens-water-v1/剧本.txt) | 隐形眼镜远离水：4段医生边讲边示范、两组续接，第1/3段首尾双帧 | 4张输入图已导入核对；预计29.875秒；未运行TTS/H3 |
 
 在仓库根目录运行：
 
