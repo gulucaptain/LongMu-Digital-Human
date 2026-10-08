@@ -1,0 +1,4 @@
+# 合并到服务器实际使用的部署TOML；以下路径示例假设该TOML位于仓库configs/。
+reference_source_audio = "../scripts/dry-eye-nutrition-ep04-v1/assets/reference_audios/reference_audio_1.mp3"
+# 文字可选；无文字启用仅音色克隆。若填写必须对应真实录音，不能用第一镜台词代替。
+# reference_source_text = "经核对的参考录音逐字文字"

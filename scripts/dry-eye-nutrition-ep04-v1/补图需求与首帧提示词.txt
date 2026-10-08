@@ -1,0 +1,18 @@
+交互版待补三张首帧｜六段、三组续接
+
+以下是图片生成提示词与输入要求，图片尚未生成；project.interaction.draft.json当前不能通过真实素材存在校验。补齐并核对三张图后，分别为1、3、5的首帧；2、4、6自动继承前段实际末帧。输入图核对在生成前，视频生成期间不暂停人工尾帧审核，完成后统一检查整片。
+三张图均为9:16真人医疗科普摄影，人物身份参考img_002.png；白大褂、浅蓝衬衫和发型保持一致。实际画面中的手部和道具按以下明确状态准备，字幕交后期。不要用已有眼科诊室图中的眼药水瓶替代营养补充剂示教瓶。
+
+1｜nutrition_intro_start.png（1→2）
+Preserve the female doctor identity, dark tied-back hair, white coat and light-blue shirt from img_002.png. Realistic vertical 9:16 medium photograph at a tidy bright consultation table. Her lips are gently closed. Her bare right hand already holds a small cylindrical amber teaching bottle upright at chest level; it has a plain amber body and a round white screw cap. Her fingers hold the body below the cap. A shallow beige tray rests directly below the bottle on the table. A round white meal plate containing vegetables, fruit, whole grains and a cooked fish portion is already beside the tray, with a small white nut bowl and a clear water glass. Her bare left hand rests beside the plate, all fingertips visible. The table supports every dish. Plain teaching-container surfaces, neutral daylight, fixed medium framing.
+动作准备：第1段右手将瓶垂直放稳在托盘；第2段由实际末帧继续，左手扶餐盘外缘轻移餐盘。原稿双人演示简化为同一示范者和已有道具，保持一段一个主动作。
+
+3｜nutrition_meal_start.png（3→4）
+Realistic vertical 9:16 overhead photograph of the same round white plate and the same vegetables, fruit, whole grains and cooked fish portion, accompanied by the same small white nut bowl and clear water glass. Bright neutral daylight and stable framing. The same demonstrator's bare right hand is already beside the plate; bare left hand rests on the table with visible white-coat and light-blue shirt cuffs. Hands, plate, bowl and glass are fully within frame. The food groups and fish/nut area are close enough for one gentle presentation gesture. Everyday portions, plain dishware, natural food textures.
+动作准备：第3段右手在食物上方作一次缓慢展示手势，结束在谷物附近；第4段继承该末帧，转向鱼和坚果区域再停稳。手指与食物保持可见分离，食品无需随台词变化，水杯留在原位。
+
+5｜nutrition_bottle_start.png（5→6）
+Preserve the same female doctor identity, hairstyle, white coat and light-blue shirt. Realistic vertical 9:16 medium photograph at the same bright consultation table. Lips gently closed. Her bare right hand already holds the same small cylindrical plain amber teaching bottle upright at chest level, with the same round white screw cap and fingers around the bottle body below the cap. The same shallow beige tray and a blank white assessment card lie visibly on the table below; her bare left hand rests beside the card. All fingers, the entire bottle, tray and card are clearly within frame. The bottle is a generic teaching container with a plain surface. Accurate caption wording will be added in post-production.
+动作准备：第5段轻微展示同一瓶子并拿稳；第6段继承实际握法和物体位置，将同一瓶放回托盘并停稳。记录卡已在首帧，不要求同时指卡。比较图示需后期额外实现。
+
+截图第五章（维生素提醒）保留在source_storyboard.json中；用户未提供台词，不补写、不进入执行计划。

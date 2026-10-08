@@ -1,0 +1,38 @@
+{
+  "source": "project.json shots[].text",
+  "single_voice": true,
+  "voice_source": "reference_audio_1.mp3",
+  "transcript_pending": true,
+  "shots": [
+    {
+      "id": 1,
+      "file": "clip_01.txt",
+      "text": "得了干眼，是不是要赶紧补鱼油、维生素、叶黄素？先别急着买一堆保健品。"
+    },
+    {
+      "id": 2,
+      "file": "clip_02.txt",
+      "text": "保健品并不能替代查明病因和规范治疗。"
+    },
+    {
+      "id": 3,
+      "file": "clip_03.txt",
+      "text": "更实用的是保持均衡饮食，蔬菜、水果、全谷物和优质蛋白合理搭配。"
+    },
+    {
+      "id": 4,
+      "file": "clip_04.txt",
+      "text": "适量吃鱼和坚果，注意正常补水，避免极端节食。"
+    },
+    {
+      "id": 5,
+      "file": "clip_05.txt",
+      "text": "鱼油对干眼的研究结果并不一致。一项中重度干眼的大型随机试验中，补充鱼油未优于对照组。"
+    },
+    {
+      "id": 6,
+      "file": "clip_06.txt",
+      "text": "得了干眼并非必须吃鱼油，也不能保证有效。是否需要补充，应结合个人情况和医生判断。"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# 复制为runtime.toml并填写服务器路径；相对路径以本文件目录为基准。
+tts_model_path = "/data/haoyuzhao/models/Qwen3-TTS-Base"
+bootstrap_model_path = "/data/haoyuzhao/models/Qwen3-TTS"
+h3_model_path = "/data/haoyuzhao/models/MiniMax-H3"
+# 两套环境均需安装本项目。省略时使用当前解释器。
+# tts_python = "/opt/venvs/tts/bin/python"
+# h3_python = "/opt/venvs/h3/bin/python"
+tts_device = "cuda:5"
+tts_attention = "sdpa"
+tts_seed = 20261008
+h3_seed = 42
+h3_steps = 50
+tts_revision_tag = "Qwen3-TTS-12Hz-1.7B-Base-clone-local"
+h3_revision_tag = "local-FL2VA"
+# 使用已有声音时，录音文字必须逐字对应。
+# reference_source_audio = "/path/to/reference.wav"
+# reference_source_text = "录音对应的完整文字"

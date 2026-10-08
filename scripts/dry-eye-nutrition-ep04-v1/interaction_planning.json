@@ -1,0 +1,203 @@
+{
+  "planning_version": 1,
+  "project_id": "dry-eye-nutrition-ep04-v1",
+  "status": "draft_missing_three_reference_images_not_gpu_tested",
+  "runtime_consumed": false,
+  "project_file": "project.interaction.draft.json",
+  "review_policy": {
+    "during_generation": "automatic_no_manual_frame_gate",
+    "after_generation": "full_video_and_flagged_clips",
+    "input_asset_review": "before_generation",
+    "runtime_consumed": false
+  },
+  "voice": "与讲解版相同的reference_audio_1.mp3统一旁白，无逐字文字时使用仅音色克隆",
+  "shot_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "continuity_groups": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "object_registry": [
+    {
+      "object_id": "supplement_bottle_01",
+      "source": "planned_generated",
+      "appearance": "小型圆柱琥珀色示教瓶，圆形白色旋盖，瓶身素面；以待生成首帧确认为准",
+      "initial_location": "右手在胸前握瓶身，瓶口朝上",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "expected_end_states": {
+        "1": "直立放在米色浅托盘",
+        "2": "保持托盘位置",
+        "5": "右手稳握瓶身",
+        "6": "直立放回托盘"
+      },
+      "role": "营养补充剂示教道具，不由瓶形推断真实成分",
+      "runtime_consumed": false
+    },
+    {
+      "object_id": "meal_plate_01",
+      "source": "planned_generated",
+      "appearance": "白色圆形餐盘，现有蔬菜、水果、全谷物和熟鱼；白色坚果小碗及透明水杯",
+      "initial_location": "桌面已有完整摆盘",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected_end_state": "食物由餐盘支持，器皿保持形态和数量",
+      "runtime_consumed": false
+    },
+    {
+      "object_id": "assessment_card_01",
+      "source": "planned_generated",
+      "appearance": "素面白色个人情况记录卡；准确文字交后期",
+      "initial_location": "米色浅托盘旁桌面",
+      "first_shot": 5,
+      "persist_in_shots": [
+        5,
+        6
+      ],
+      "expected_end_state": "保持桌面原位且可见",
+      "runtime_consumed": false
+    },
+    {
+      "object_id": "bottle_tray_01",
+      "source": "planned_generated",
+      "appearance": "同一米色浅托盘，平底、低边缘，完整容纳示教瓶底座",
+      "initial_location": "瓶子正下方桌面",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "expected_end_state": "固定在桌面，支持直立示教瓶",
+      "runtime_consumed": false
+    }
+  ],
+  "asset_requirements": [
+    {
+      "path": "reference_images/nutrition_intro_start.png",
+      "status": "missing_not_generated",
+      "shot": 1
+    },
+    {
+      "path": "reference_images/nutrition_meal_start.png",
+      "status": "missing_not_generated",
+      "shot": 3
+    },
+    {
+      "path": "reference_images/nutrition_bottle_start.png",
+      "status": "missing_not_generated",
+      "shot": 5
+    }
+  ],
+  "actions": [
+    {
+      "shot_id": 1,
+      "action": "The demonstrator starts with the small cylindrical amber teaching bottle held upright in her right hand at chest level, matching the supplied first frame. The bottle has a round white screw cap and a plain amber body. Her right fingers hold its body below the cap. She slowly lowers this same bottle vertically onto the existing shallow beige tray on the table, releases it when its flat base rests securely, and settles her right hand beside the tray. Her bare left hand stays resting beside the existing white meal plate. Finish with the bottle upright on the tray, the plate still on the table, and both hands visible. The narration is off-screen and her lips remain gently closed.",
+      "continue_from": null,
+      "review_timing": "全部生成完成后",
+      "object_ids": [
+        "supplement_bottle_01",
+        "bottle_tray_01",
+        "meal_plate_01"
+      ],
+      "expected_end_state": "瓶子直立放稳在托盘，右手停在旁边，左手保持餐盘旁位置",
+      "primary_hand": "人物自身右手"
+    },
+    {
+      "shot_id": 2,
+      "action": "Begin from the preceding actual final frame. Preserve the same upright amber bottle, round white cap and beige tray in their visible positions. The demonstrator places her bare left fingertips on the outside rim of the existing round white meal plate and slides the plate a short distance toward the center of the table, keeping it flat and all food supported. Her right hand remains beside the tray. Finish with the plate settled flat, left fingertips lightly resting on its outer rim, and the bottle still visible on its tray. The narration is off-screen and her lips remain gently closed.",
+      "continue_from": 1,
+      "review_timing": "全部生成完成后",
+      "object_ids": [
+        "supplement_bottle_01",
+        "bottle_tray_01",
+        "meal_plate_01"
+      ],
+      "expected_end_state": "餐盘平放，左手轻扶外缘，瓶子与托盘仍可见",
+      "primary_hand": "人物自身左手"
+    },
+    {
+      "shot_id": 3,
+      "action": "In the supplied overhead composition, preserve the round white meal plate with existing vegetables, fruit, whole grains and a cooked fish portion, the small white nut bowl and the clear water glass in their shown positions. The demonstrator's bare right hand starts beside the plate, with the same white-coat sleeve visible. With an open relaxed hand held above the food, she makes one slow presentation sweep over the vegetable, fruit and grain sections, keeping fingertips visibly separated from the food, and settles her hand beside the grain section. Her left hand stays at its starting table position. Finish with both hands visible and every dish in its starting position.",
+      "continue_from": null,
+      "review_timing": "全部生成完成后",
+      "object_ids": [
+        "meal_plate_01"
+      ],
+      "expected_end_state": "右手在谷物区域旁停稳，食物由原餐盘支持",
+      "primary_hand": "人物自身右手"
+    },
+    {
+      "shot_id": 4,
+      "action": "Begin from the preceding actual overhead final frame. Preserve the same white plate, its food portions, the same nut bowl and water glass, and the current right-hand position beside the grain section. The demonstrator gently moves her open right hand over the adjacent cooked fish portion and nut bowl as one presentation gesture, with fingertips visibly separated from the food. She settles the hand beside the plate. Her left hand remains in its visible starting position. Finish with the plate, nut bowl and glass still in place; the narration remains off-screen.",
+      "continue_from": 3,
+      "review_timing": "全部生成完成后",
+      "object_ids": [
+        "meal_plate_01"
+      ],
+      "expected_end_state": "右手停在餐盘旁，鱼、坚果及水杯原位可见",
+      "primary_hand": "人物自身右手"
+    },
+    {
+      "shot_id": 5,
+      "action": "The demonstrator starts with the same specified small cylindrical amber teaching bottle already held upright in her bare right hand at chest level, as shown in the supplied first frame. It has a plain amber body and a round white screw cap, and her fingers hold the body below the cap. She gently brings this same bottle a short distance toward the center of the frame, preserving its upright orientation and grip, then holds it steady. Her bare left hand rests on the table beside the existing blank assessment card. The shallow beige tray remains visible beside the card. Finish with the bottle clearly visible in the same steady grip. The narration is off-screen and her lips remain gently closed.",
+      "continue_from": null,
+      "review_timing": "全部生成完成后",
+      "object_ids": [
+        "supplement_bottle_01",
+        "bottle_tray_01",
+        "assessment_card_01"
+      ],
+      "expected_end_state": "右手在胸前稳握同一瓶身，瓶子朝上",
+      "primary_hand": "人物自身右手"
+    },
+    {
+      "shot_id": 6,
+      "action": "Begin from the preceding actual final frame. Preserve the visible amber bottle, its round white cap, the demonstrator's right-hand grip, the beige tray and the blank assessment card. She slowly lowers the same upright bottle onto the tray beside the card, releases it once its flat base is securely supported, and rests her right hand beside the tray. Her left hand stays beside the card in its preceding visible pose. Finish with the capped bottle standing steadily on the tray, the card fully visible and both hands supported by the table. The narration is off-screen and her lips remain gently closed.",
+      "continue_from": 5,
+      "review_timing": "全部生成完成后",
+      "object_ids": [
+        "supplement_bottle_01",
+        "bottle_tray_01",
+        "assessment_card_01"
+      ],
+      "expected_end_state": "同一瓶子放稳在托盘，记录卡保持可见，双手在桌面停稳",
+      "primary_hand": "人物自身右手"
+    }
+  ],
+  "adaptations": [
+    "保留6段与原台词；交互人物沿用同一女医生，台词改为统一画外旁白以适配simple_action",
+    "原稿患者摆瓶与医生放盘简化为女医生单步放瓶、移动已有餐盘；没有增加患者角色",
+    "镜头3/4用同一餐盘俯拍与单步展示手势；食品在首帧已齐全，不逐镜凭空替换",
+    "镜头5展示已有示教瓶，镜头6单步放回托盘；指记录卡动作未执行，记录卡提前在首帧可见",
+    "鱼油组/对照组准确图示仍为额外后期需求，当前compose未实现自动图示",
+    "截图第五章无台词，仍仅保留原画面需求，不补写"
+  ]
+}

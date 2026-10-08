@@ -1,0 +1,81 @@
+# Python bytecode, environments and build products
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local credentials and deployment settings; keep templates
+.env
+.env.*
+!.env.example
+!.env.sample
+/configs/runtime*.toml
+!/configs/runtime.example.toml
+/configs/*.local.toml
+/configs/*.secrets.toml
+credentials.json
+service-account*.json
+*.pem
+*.key
+
+# Downloaded weights: anchor directories to avoid ignoring diffsynth/models code
+/models/
+/weights/
+/checkpoints/
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.gguf
+/cache/
+/.cache/
+/hf_cache/
+
+# Generated runs, model outputs and machine-specific state
+/workspace/
+/outputs/
+**/runs/
+**/renders*/
+**/.longmu-locks/
+**/config.snapshot.json
+_archive/
+*.log
+*.pending
+*.pending.*
+
+# Reference media: back up separately, including any voice transcripts
+/assets/longmu/reference_images/
+/assets/longmu/legacy_medical_reference/
+**/reference_audios/
+/scripts/*/assets/reference_images/
+
+# Audio/video artifacts; retain script JSON, prompt text and skill templates
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.aac
+*.ogg
+*.mp4
+*.mov
+*.mkv
+*.webm
+
+# OS and local editor state
+.DS_Store
+._*
+Thumbs.db
+/.idea/
+*.swp
+*.swo

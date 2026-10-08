@@ -1,0 +1,52 @@
+{
+  "consumer": "project.json shots[].text is the actual code input; these txt files are review copies",
+  "single_voice": true,
+  "bootstrap_reference_shot": 1,
+  "segments": [
+    {
+      "id": 1,
+      "text": "今天讲解滴眼药水的方法，从用药前准备，到滴完后的处理，一起分步来看。",
+      "expected_output": "audio/clip_01_tts.wav"
+    },
+    {
+      "id": 2,
+      "text": "先核对药名、要滴哪只眼和有效期；开封后的使用期限，按说明书确认。",
+      "expected_output": "audio/clip_02_tts.wav"
+    },
+    {
+      "id": 3,
+      "text": "用肥皂和清水洗手。这里展示洗手的一部分，实际操作要把双手洗干净。",
+      "expected_output": "audio/clip_03_tts.wav"
+    },
+    {
+      "id": 4,
+      "text": "按说明书确认是否需要摇匀。开盖后别碰瓶口，也别让瓶口接触其他物体。",
+      "expected_output": "audio/clip_04_tts.wav"
+    },
+    {
+      "id": 5,
+      "text": "坐稳后，头稍后仰，眼睛向上看；轻拉下眼睑，形成一个小口袋。",
+      "expected_output": "audio/clip_05_tts.wav"
+    },
+    {
+      "id": 6,
+      "text": "另一只手把药瓶倒置，瓶口悬在小口袋上方，别碰眼睛、眼睑或睫毛。",
+      "expected_output": "audio/clip_06_tts.wav"
+    },
+    {
+      "id": 7,
+      "text": "按医嘱，把规定的滴数滴进小口袋。不要为了增加效果，自行多滴。",
+      "expected_output": "audio/clip_07_tts.wav"
+    },
+    {
+      "id": 8,
+      "text": "滴完轻轻闭眼，用手指轻按靠鼻侧的内眼角至少一分钟，不要按压眼球。",
+      "expected_output": "audio/clip_08_tts.wav"
+    },
+    {
+      "id": 9,
+      "text": "同一只眼使用不同眼药水，至少间隔五分钟。具体滴数、次数和顺序，遵医嘱。",
+      "expected_output": "audio/clip_09_tts.wav"
+    }
+  ]
+}

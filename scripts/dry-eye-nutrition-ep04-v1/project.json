@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "project_id": "dry-eye-nutrition-ep04-v1",
+  "title": "第4集｜干眼吃什么？鱼油是不是必需品？（医生讲解试生成版）",
+  "asset_root": "assets",
+  "characters": {
+    "doctor": {
+      "description": "the Chinese female doctor in the supplied reference, with dark hair tied back, wearing the existing white coat over a light-blue shirt, standing with both bare, empty hands at her sides in the bright consultation room; the anatomical eye model on its white stand and the two small capped white eye-drop bottles remain on the desk",
+      "speech_mode": "on_camera"
+    }
+  },
+  "visual_constraints": "Professional medical education. Preserve the supplied character identity, clothing, room, lighting and desk layout. The anatomical eye model on its white stand and the two capped white eye-drop bottles keep their original appearance and desk positions throughout. The camera remains fixed. Spoken explanations are delivered verbally; the visible body pose follows the stated action. Visible props are those already present in the supplied frame. Captions are added in post-production.",
+  "notice": "",
+  "settings": {
+    "width": 576,
+    "height": 1024,
+    "fps": 24,
+    "min_video_seconds": 5,
+    "max_video_seconds": 10,
+    "tts_language": "Chinese",
+    "tts_speaker": "Serena",
+    "tts_instruct": "标准普通话，清晰自然的医疗科普讲解，语气专业亲切。",
+    "tts_tempo": 1.0,
+    "burn_subtitles": true,
+    "show_keypoints": false,
+    "save_progress_after_each_clip": true
+  },
+  "shots": [
+    {
+      "id": 1,
+      "text": "得了干眼，是不是要赶紧补鱼油、维生素、叶黄素？先别急着买一堆保健品。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The doctor faces the camera and explains verbally. Both bare, empty hands remain naturally at her sides, with fingers relaxed in the reference pose throughout. Visible movement consists of speaking mouth motion and natural blinking. Her head and shoulders maintain the reference orientation. The anatomical eye model on its white stand and the two small capped white eye-drop bottles remain in their original desk positions. Finish in this stable standing pose with both hands at her sides.",
+      "keypoint": "先了解是否需要"
+    },
+    {
+      "id": 2,
+      "text": "保健品并不能替代查明病因和规范治疗。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "continue_from": 1,
+      "last_image": null,
+      "action": "Begin from the supplied preceding final frame and continue the verbal explanation. Preserve the visible head, shoulder, arm and finger positions. Both bare, empty hands stay naturally at her sides. Visible movement consists of speaking mouth motion and natural blinking. Preserve the same anatomical eye model, its white stand and the two capped white eye-drop bottles in their existing desk positions. Finish with the same stable standing pose.",
+      "keypoint": "查明病因，规范治疗"
+    },
+    {
+      "id": 3,
+      "text": "更实用的是保持均衡饮食，蔬菜、水果、全谷物和优质蛋白合理搭配。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The doctor faces the camera and explains verbally. Both bare, empty hands remain naturally at her sides, with fingers relaxed in the reference pose throughout. Visible movement consists of speaking mouth motion and natural blinking. Her head and shoulders maintain the reference orientation. The anatomical eye model on its white stand and the two small capped white eye-drop bottles remain in their original desk positions. Finish in this stable standing pose with both hands at her sides.",
+      "keypoint": "保持均衡饮食"
+    },
+    {
+      "id": 4,
+      "text": "适量吃鱼和坚果，注意正常补水，避免极端节食。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "continue_from": 3,
+      "last_image": null,
+      "action": "Begin from the supplied preceding final frame and continue the verbal explanation. Preserve the visible head, shoulder, arm and finger positions. Both bare, empty hands stay naturally at her sides. Visible movement consists of speaking mouth motion and natural blinking. Preserve the same anatomical eye model, its white stand and the two capped white eye-drop bottles in their existing desk positions. Finish with the same stable standing pose.",
+      "keypoint": "适量吃鱼和坚果"
+    },
+    {
+      "id": 5,
+      "text": "鱼油对干眼的研究结果并不一致。一项中重度干眼的大型随机试验中，补充鱼油未优于对照组。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The doctor faces the camera and explains verbally. Both bare, empty hands remain naturally at her sides, with fingers relaxed in the reference pose throughout. Visible movement consists of speaking mouth motion and natural blinking. Her head and shoulders maintain the reference orientation. The anatomical eye model on its white stand and the two small capped white eye-drop bottles remain in their original desk positions. Finish in this stable standing pose with both hands at her sides.",
+      "keypoint": "该试验未见优于对照组"
+    },
+    {
+      "id": 6,
+      "text": "得了干眼并非必须吃鱼油，也不能保证有效。是否需要补充，应结合个人情况和医生判断。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "continue_from": 5,
+      "last_image": null,
+      "action": "Begin from the supplied preceding final frame and continue the verbal explanation. Preserve the visible head, shoulder, arm and finger positions. Both bare, empty hands stay naturally at her sides. Visible movement consists of speaking mouth motion and natural blinking. Preserve the same anatomical eye model, its white stand and the two capped white eye-drop bottles in their existing desk positions. Finish with the same stable standing pose.",
+      "keypoint": "结合个人情况判断"
+    }
+  ]
+}

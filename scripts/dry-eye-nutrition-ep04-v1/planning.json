@@ -1,0 +1,279 @@
+{
+  "planning_version": 1,
+  "project_id": "dry-eye-nutrition-ep04-v1",
+  "status": "inputs_audio_only_reference_ready_not_gpu_tested",
+  "scope": "前四章完整台词的医生讲解试生成版；第五章仅保存原画面需求",
+  "source_mapping": [
+    {
+      "shot_id": 1,
+      "source_chapter": 1,
+      "text": "得了干眼，是不是要赶紧补鱼油、维生素、叶黄素？先别急着买一堆保健品。",
+      "changes": "按用户要求压缩到6段；合并或精简口语，保留核心信息、否定和试验范围"
+    },
+    {
+      "shot_id": 2,
+      "source_chapter": 1,
+      "text": "保健品并不能替代查明病因和规范治疗。",
+      "changes": "按用户要求压缩到6段；合并或精简口语，保留核心信息、否定和试验范围"
+    },
+    {
+      "shot_id": 3,
+      "source_chapter": 2,
+      "text": "更实用的是保持均衡饮食，蔬菜、水果、全谷物和优质蛋白合理搭配。",
+      "changes": "按用户要求压缩到6段；合并或精简口语，保留核心信息、否定和试验范围"
+    },
+    {
+      "shot_id": 4,
+      "source_chapter": 2,
+      "text": "适量吃鱼和坚果，注意正常补水，避免极端节食。",
+      "changes": "按用户要求压缩到6段；合并或精简口语，保留核心信息、否定和试验范围"
+    },
+    {
+      "shot_id": 5,
+      "source_chapter": 3,
+      "text": "鱼油对干眼的研究结果并不一致。一项中重度干眼的大型随机试验中，补充鱼油未优于对照组。",
+      "changes": "按用户要求压缩到6段；合并或精简口语，保留核心信息、否定和试验范围"
+    },
+    {
+      "shot_id": 6,
+      "source_chapter": 4,
+      "text": "得了干眼并非必须吃鱼油，也不能保证有效。是否需要补充，应结合个人情况和医生判断。",
+      "changes": "按用户要求压缩到6段；合并或精简口语，保留核心信息、否定和试验范围"
+    }
+  ],
+  "chapters": [
+    {
+      "id": 1,
+      "title": "保健品疑问",
+      "original_text": "得了干眼，是不是要赶紧补鱼油、维生素、叶黄素？先别急着买一堆保健品，它们并不能替代查明病因和规范治疗。",
+      "original_visual": "餐桌中景。患者摆出几瓶无品牌补充剂，医生将均衡餐盘放在旁边。镜头停留在“先了解是否需要”的字幕上。"
+    },
+    {
+      "id": 2,
+      "title": "均衡饮食示范",
+      "original_text": "更实用的是保持均衡饮食，蔬菜、水果、全谷物和优质蛋白合理搭配，适量吃鱼和坚果，注意正常补水，避免极端节食。",
+      "original_visual": "餐盘俯拍。依次展示蔬菜、水果、全谷物及蛋白质食物，鱼和坚果作为其中一部分。画面不标注治疗剂量。"
+    },
+    {
+      "id": 3,
+      "title": "鱼油证据有分歧",
+      "original_text": "鱼油补充剂对干眼的研究结果并不一致。一项大型随机试验发现，补充鱼油改善干眼的效果，并没有优于对照组。",
+      "original_visual": "医生正面中景。补充剂示教瓶旁出现“研究结果不一致”，再用简洁图示呈现鱼油组与对照组，避免使用治愈率动画。"
+    },
+    {
+      "id": 4,
+      "title": "不是人人都要补",
+      "original_text": "所以，不能说得了干眼就必须吃鱼油，也不能保证吃了就有效。是否需要补充，要结合个人情况，和医生一起判断。",
+      "original_visual": "桌面近景转中景。医生把鱼油瓶放回补充剂区，指向患者个人情况记录卡。字幕显示“是否需要，结合个人情况”。"
+    },
+    {
+      "id": 5,
+      "title": "维生素使用提醒",
+      "original_text": null,
+      "original_visual": "胡萝卜等食物与维生素示教瓶同框。医生翻开营养评估记录，屏幕突出“缺乏需评估”“不自行大剂量补充”。",
+      "status": "仅画面可见，未提供台词；按用户要求不补写，不进入TTS/H3执行计划"
+    }
+  ],
+  "visual_adaptation": {
+    "reason": "现有素材库缺餐盘、营养补充剂、营养评估记录和双人餐桌场景，不能让模型凭空出现道具",
+    "decision": "可先试的project.json使用已有医生图讲解；原始画面保存在source_storyboard.json与补图需求中，尚未落实",
+    "original_visuals_fulfilled": false,
+    "interaction_draft": "project.interaction.draft.json；六段单步交互旁白草案，待三张匹配首帧，未替换当前讲解版"
+  },
+  "voice": {
+    "mode": "imported_reference",
+    "source": "assets/reference_audios/reference_audio_1.mp3",
+    "original_source": "assets/longmu/reference_audios/reference_audio_1.mp3",
+    "seconds": 12.561995,
+    "reference_text": null,
+    "transcript_verified": false,
+    "status": "仅音色参考已就绪；可选准确逐字文字有助于质量；未运行TTS",
+    "output": "runs/reference-audio-1",
+    "x_vector_only_mode": true
+  },
+  "timing": {
+    "source_target_seconds": 90,
+    "source_shot_seconds": 15,
+    "execution_shot_count": 6,
+    "strict_total_duration_guaranteed": false,
+    "reason": "当前单镜预算5–10秒，按语义拆分，不承诺6镜×15秒；只执行可见完整台词",
+    "basis": "估算，须TTS实测"
+  },
+  "asset_review": [
+    {
+      "file": "assets/reference_images/img_002.png",
+      "status": "已查看",
+      "observation": "女医生、白大褂、浅蓝衬衫、双手放松；旁边是眼球模型与眼药水瓶，并非营养补充剂",
+      "crop_review": "竖图9:16与576×1024一致；缩放保留人物与桌面道具，不安排手部操作"
+    }
+  ],
+  "continuity": [
+    {
+      "shot_id": 1,
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "expected_end_state": "医生双手裸露且空手，垂在身体两侧；桌面眼球模型与两只盖好眼药水瓶保持原位",
+      "reason": "1→2、3→4、5→6三组自动末帧续接；生成期间不暂停人工尾帧审核"
+    },
+    {
+      "shot_id": 2,
+      "first_image": null,
+      "continue_from": 1,
+      "expected_end_state": "医生双手裸露且空手，垂在身体两侧；桌面眼球模型与两只盖好眼药水瓶保持原位",
+      "reason": "1→2、3→4、5→6三组自动末帧续接；生成期间不暂停人工尾帧审核"
+    },
+    {
+      "shot_id": 3,
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "expected_end_state": "医生双手裸露且空手，垂在身体两侧；桌面眼球模型与两只盖好眼药水瓶保持原位",
+      "reason": "1→2、3→4、5→6三组自动末帧续接；生成期间不暂停人工尾帧审核"
+    },
+    {
+      "shot_id": 4,
+      "first_image": null,
+      "continue_from": 3,
+      "expected_end_state": "医生双手裸露且空手，垂在身体两侧；桌面眼球模型与两只盖好眼药水瓶保持原位",
+      "reason": "1→2、3→4、5→6三组自动末帧续接；生成期间不暂停人工尾帧审核"
+    },
+    {
+      "shot_id": 5,
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "expected_end_state": "医生双手裸露且空手，垂在身体两侧；桌面眼球模型与两只盖好眼药水瓶保持原位",
+      "reason": "1→2、3→4、5→6三组自动末帧续接；生成期间不暂停人工尾帧审核"
+    },
+    {
+      "shot_id": 6,
+      "first_image": null,
+      "continue_from": 5,
+      "expected_end_state": "医生双手裸露且空手，垂在身体两侧；桌面眼球模型与两只盖好眼药水瓶保持原位",
+      "reason": "1→2、3→4、5→6三组自动末帧续接；生成期间不暂停人工尾帧审核"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.nei.nih.gov/research-and-training/research-news/omega-3s-fish-oil-supplements-no-better-placebo-dry-eye",
+      "supports": "DREAM中重度干眼试验：补充omega-3未显示优于对照组；不能外推为所有补充剂或所有患者都无效"
+    },
+    {
+      "url": "https://www.nccih.nih.gov/health/omega3-supplements-what-you-need-to-know",
+      "supports": "鱼油与鱼肝油应区分，补充剂与食物不能等同；用于核对不新增台词"
+    }
+  ],
+  "pending_review": [
+    "参考文字可选；当前仅音色克隆，TTS后按实测时长检查预算",
+    "交互版需要三张含明确物体与手势的首帧；当前尚未生成",
+    "全部生成完成后检查整片：手中物体、道具身份/数量、手指、口型、接缝、发音和字幕",
+    "发现错误时追踪continue_from继承范围，重做受影响镜头及其依赖后续片段",
+    "医学内容最终复核；均衡饮食仅为一般生活方式建议"
+  ],
+  "unsupported_requirements": [
+    "当前镜头内变焦、多个切镜、自动图示合成",
+    "第五镜无台词，不能作为当前要求非空text的镜头执行"
+  ],
+  "review_policy": {
+    "during_generation": "automatic_no_manual_frame_gate",
+    "after_generation": "full_video_and_flagged_clips",
+    "input_asset_review": "before_generation",
+    "runtime_consumed": false
+  },
+  "object_registry": [
+    {
+      "object_id": "eye_model_01",
+      "source": "reference_image",
+      "appearance": "首帧中的白色底座解剖眼球模型",
+      "initial_location": "医生旁桌面",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "interaction": "保持桌面原位置，仅为现有背景道具",
+      "runtime_consumed": false
+    },
+    {
+      "object_id": "eye_drop_pair_01",
+      "source": "reference_image",
+      "appearance": "首帧中两只盖好的白色小眼药水瓶",
+      "initial_location": "眼球模型旁的桌面",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "interaction": "保持原形态、数量和位置；物体身份为眼药水瓶",
+      "runtime_consumed": false
+    }
+  ],
+  "action_review": [
+    {
+      "shot_id": 1,
+      "operator": "女医生",
+      "initial_state": "独立首帧或前一镜实际末帧中的站立姿势",
+      "hand_state": "双手裸露、空手、自然垂在身体两侧",
+      "main_action": "面向镜头说话和自然眨眼",
+      "interaction_objects": [],
+      "end_state": "稳定站姿、头肩朝向和双手位置保持",
+      "review_timing": "全部视频生成和合成完成后"
+    },
+    {
+      "shot_id": 2,
+      "operator": "女医生",
+      "initial_state": "独立首帧或前一镜实际末帧中的站立姿势",
+      "hand_state": "双手裸露、空手、自然垂在身体两侧",
+      "main_action": "面向镜头说话和自然眨眼",
+      "interaction_objects": [],
+      "end_state": "稳定站姿、头肩朝向和双手位置保持",
+      "review_timing": "全部视频生成和合成完成后"
+    },
+    {
+      "shot_id": 3,
+      "operator": "女医生",
+      "initial_state": "独立首帧或前一镜实际末帧中的站立姿势",
+      "hand_state": "双手裸露、空手、自然垂在身体两侧",
+      "main_action": "面向镜头说话和自然眨眼",
+      "interaction_objects": [],
+      "end_state": "稳定站姿、头肩朝向和双手位置保持",
+      "review_timing": "全部视频生成和合成完成后"
+    },
+    {
+      "shot_id": 4,
+      "operator": "女医生",
+      "initial_state": "独立首帧或前一镜实际末帧中的站立姿势",
+      "hand_state": "双手裸露、空手、自然垂在身体两侧",
+      "main_action": "面向镜头说话和自然眨眼",
+      "interaction_objects": [],
+      "end_state": "稳定站姿、头肩朝向和双手位置保持",
+      "review_timing": "全部视频生成和合成完成后"
+    },
+    {
+      "shot_id": 5,
+      "operator": "女医生",
+      "initial_state": "独立首帧或前一镜实际末帧中的站立姿势",
+      "hand_state": "双手裸露、空手、自然垂在身体两侧",
+      "main_action": "面向镜头说话和自然眨眼",
+      "interaction_objects": [],
+      "end_state": "稳定站姿、头肩朝向和双手位置保持",
+      "review_timing": "全部视频生成和合成完成后"
+    },
+    {
+      "shot_id": 6,
+      "operator": "女医生",
+      "initial_state": "独立首帧或前一镜实际末帧中的站立姿势",
+      "hand_state": "双手裸露、空手、自然垂在身体两侧",
+      "main_action": "面向镜头说话和自然眨眼",
+      "interaction_objects": [],
+      "end_state": "稳定站姿、头肩朝向和双手位置保持",
+      "review_timing": "全部视频生成和合成完成后"
+    }
+  ]
+}

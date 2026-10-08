@@ -1,0 +1,133 @@
+{
+  "episode": 6,
+  "title": "干眼和视疲劳，为什么经常一起出现？",
+  "shots": [
+    {
+      "id": 1,
+      "title": "屏幕不适",
+      "text": "看电脑一会儿就酸胀、模糊，是干眼还是视疲劳？",
+      "scene": "patient",
+      "first_image": "reference_images/img_000.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The patient pauses typing and looks mildly tired. His hands rest on the laptop. No eye rubbing.",
+      "keypoint": "酸胀、模糊：原因不止一种"
+    },
+    {
+      "id": 2,
+      "title": "两者可能共存",
+      "text": "两者可以同时存在，不能只凭眼睛累，就认定是哪一种问题。",
+      "scene": "doctor",
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The doctor speaks directly to the camera with minimal head motion and her hands relaxed at her sides.",
+      "keypoint": "干眼与视疲劳可同时存在"
+    },
+    {
+      "id": 3,
+      "title": "泪膜与视觉波动",
+      "text": "干眼可能让泪膜不稳定，看东西忽清忽糊。眨眼后可能暂时改善，但不能靠这个确诊。",
+      "scene": "doctor",
+      "first_image": null,
+      "continue_from": 2,
+      "last_image": "reference_images/img_002.png",
+      "action": "Continue the preceding doctor shot without resetting her pose. She keeps explaining, makes only a slight nod, and settles into the target ending pose.",
+      "keypoint": "眨眼后变化不能单独确诊"
+    },
+    {
+      "id": 4,
+      "title": "看近负担",
+      "text": "长时间看近，会增加调节和双眼协同工作的负担。酸胀、看不清，还要考虑其他因素。",
+      "scene": "doctor",
+      "first_image": null,
+      "continue_from": 3,
+      "last_image": "reference_images/img_002.png",
+      "action": "Continue the same explanation, keeping hands low and head motion subtle. Finish in the supplied target ending pose without a sudden pose change.",
+      "keypoint": "调节 ＋ 双眼协同"
+    },
+    {
+      "id": 5,
+      "title": "安排远眺休息",
+      "text": "可以用二十、二十、二十提醒自己：每用眼二十分钟，看看约六米外，至少二十秒。",
+      "scene": "patient",
+      "first_image": "reference_images/img_000.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The patient stops typing, rests his hands on the desk and slowly turns toward the existing window on the left to look into the distance. Complete the turn early and hold the pose.",
+      "keypoint": "20分钟／约6米／至少20秒｜过程压缩展示"
+    },
+    {
+      "id": 6,
+      "title": "完整眨眼与休息原则",
+      "text": "同时做几次轻柔、完整的眨眼。这个口诀是休息提醒，不是治愈干眼的公式。",
+      "scene": "patient",
+      "first_image": null,
+      "continue_from": 5,
+      "last_image": "same_as_start",
+      "action": "Continue from the preceding final pose. The patient keeps looking toward the window and completes two gentle full blinks without squeezing. Finish near the same relaxed starting pose.",
+      "keypoint": "轻柔完整眨眼｜休息不是治愈公式"
+    },
+    {
+      "id": 7,
+      "title": "调整用眼",
+      "text": "也可以调大字体，减少持续盯屏幕。眼睛不舒服，不要为了工作一直硬撑。",
+      "scene": "patient",
+      "first_image": null,
+      "continue_from": 6,
+      "last_image": "reference_images/img_000.png",
+      "action": "The patient naturally turns back toward the laptop, briefly uses the trackpad, then pauses work. Return gradually toward the supplied desk-facing end pose. Do not show new interface text.",
+      "keypoint": "调大字体，减少持续盯屏幕"
+    },
+    {
+      "id": 8,
+      "title": "持续症状需检查",
+      "text": "如果总是酸胀、头痛或看不清，还要检查眼镜度数、调节和双眼视功能。",
+      "scene": "doctor",
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The doctor speaks directly to the camera, with a calm attentive expression and very small natural gestures.",
+      "keypoint": "度数、调节、双眼视功能"
+    },
+    {
+      "id": 9,
+      "title": "按原因处理",
+      "text": "不是所有视疲劳，都能靠一瓶眼药水解决。",
+      "scene": "doctor",
+      "first_image": null,
+      "continue_from": 8,
+      "last_image": "reference_images/img_002.png",
+      "action": "Continue the preceding doctor shot, finish the explanation and settle into the target ending pose with relaxed hands. Do not pick up bottles.",
+      "keypoint": "按原因处理｜具体诊疗请遵医嘱"
+    }
+  ],
+  "notes": [
+    "原稿科普要点保留，口播短句改写；未新增文献核验。",
+    "共9个语义片段，音频实际时长决定视频时长，不固定90秒。",
+    "患者镜头画外旁白，医生镜头测试输入音频驱动口型。"
+  ],
+  "schema_version": 1,
+  "project_id": "dry-eye",
+  "asset_root": "../../assets/longmu",
+  "characters": {
+    "doctor": {
+      "description": "the same Chinese female doctor in the supplied frame, wearing her existing white coat and light-blue shirt",
+      "speech_mode": "on_camera"
+    },
+    "patient": {
+      "description": "the same Chinese male patient in his existing beige shirt at the laptop",
+      "speech_mode": "voiceover"
+    }
+  },
+  "visual_constraints": "Existing bottles and the eye model are not handled.",
+  "notice": "健康科普，具体诊疗请遵医嘱\n明显眼痛、怕光或视力下降请及时就诊",
+  "settings": {
+    "width": 576,
+    "height": 1024,
+    "burn_subtitles": true,
+    "tts_language": "Chinese",
+    "tts_speaker": "Serena",
+    "tts_instruct": "标准普通话，清晰自然的医疗科普讲解，语气专业亲切，语速中等偏快，约每秒四到五个汉字。不要拖长音，不要逐字慢读，句间短暂停顿，医学术语读完整。"
+  }
+}

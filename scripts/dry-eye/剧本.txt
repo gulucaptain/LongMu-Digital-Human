@@ -1,0 +1,46 @@
+干眼和视疲劳，为什么经常一起出现？
+
+【第1镜｜酸胀、模糊：原因不止一种】
+台词：看电脑一会儿就酸胀、模糊，是干眼还是视疲劳？
+画面：The patient pauses typing and looks mildly tired. His hands rest on the laptop. No eye rubbing.
+首帧：reference_images/img_000.png
+
+【第2镜｜干眼与视疲劳可同时存在】
+台词：两者可以同时存在，不能只凭眼睛累，就认定是哪一种问题。
+画面：The doctor speaks directly to the camera with minimal head motion and her hands relaxed at her sides.
+首帧：reference_images/img_002.png
+
+【第3镜｜眨眼后变化不能单独确诊】
+台词：干眼可能让泪膜不稳定，看东西忽清忽糊。眨眼后可能暂时改善，但不能靠这个确诊。
+画面：Continue the preceding doctor shot without resetting her pose. She keeps explaining, makes only a slight nod, and settles into the target ending pose.
+首帧：续接第2镜实际末帧
+
+【第4镜｜调节 ＋ 双眼协同】
+台词：长时间看近，会增加调节和双眼协同工作的负担。酸胀、看不清，还要考虑其他因素。
+画面：Continue the same explanation, keeping hands low and head motion subtle. Finish in the supplied target ending pose without a sudden pose change.
+首帧：续接第3镜实际末帧
+
+【第5镜｜20分钟／约6米／至少20秒｜过程压缩展示】
+台词：可以用二十、二十、二十提醒自己：每用眼二十分钟，看看约六米外，至少二十秒。
+画面：The patient stops typing, rests his hands on the desk and slowly turns toward the existing window on the left to look into the distance. Complete the turn early and hold the pose.
+首帧：reference_images/img_000.png
+
+【第6镜｜轻柔完整眨眼｜休息不是治愈公式】
+台词：同时做几次轻柔、完整的眨眼。这个口诀是休息提醒，不是治愈干眼的公式。
+画面：Continue from the preceding final pose. The patient keeps looking toward the window and completes two gentle full blinks without squeezing. Finish near the same relaxed starting pose.
+首帧：续接第5镜实际末帧
+
+【第7镜｜调大字体，减少持续盯屏幕】
+台词：也可以调大字体，减少持续盯屏幕。眼睛不舒服，不要为了工作一直硬撑。
+画面：The patient naturally turns back toward the laptop, briefly uses the trackpad, then pauses work. Return gradually toward the supplied desk-facing end pose. Do not show new interface text.
+首帧：续接第6镜实际末帧
+
+【第8镜｜度数、调节、双眼视功能】
+台词：如果总是酸胀、头痛或看不清，还要检查眼镜度数、调节和双眼视功能。
+画面：The doctor speaks directly to the camera, with a calm attentive expression and very small natural gestures.
+首帧：reference_images/img_002.png
+
+【第9镜｜按原因处理｜具体诊疗请遵医嘱】
+台词：不是所有视疲劳，都能靠一瓶眼药水解决。
+画面：Continue the preceding doctor shot, finish the explanation and settle into the target ending pose with relaxed hands. Do not pick up bottles.
+首帧：续接第8镜实际末帧

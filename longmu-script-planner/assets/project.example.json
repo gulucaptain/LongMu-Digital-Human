@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "project_id": "screen-rest",
+  "title": "屏幕用眼休息示意",
+  "asset_root": "assets",
+  "characters": {
+    "doctor": {
+      "description": "the same Chinese female doctor in the supplied frame, wearing her existing white coat and light-blue shirt",
+      "speech_mode": "on_camera"
+    },
+    "patient": {
+      "description": "the same Chinese male patient in his existing beige shirt at the laptop beside the existing window",
+      "speech_mode": "voiceover"
+    }
+  },
+  "visual_constraints": "Do not pick up the bottles or eye model. Preserve existing props.",
+  "notice": "",
+  "settings": {
+    "width": 576,
+    "height": 1024,
+    "fps": 24,
+    "min_video_seconds": 5,
+    "max_video_seconds": 10,
+    "tts_language": "Chinese",
+    "tts_speaker": "Serena",
+    "tts_instruct": "标准普通话，清晰自然的教育讲解，语气亲切，语速适中。",
+    "save_progress_after_each_clip": true
+  },
+  "shots": [
+    {
+      "id": 1,
+      "text": "长时间看屏幕，可以安排短暂休息，让视线离开近处。",
+      "scene": "doctor",
+      "action": "The doctor maintains eye contact with a slight natural nod and relaxed hands.",
+      "keypoint": "短暂休息，移开视线",
+      "first_image": "reference_images/img_002.png",
+      "continue_from": null,
+      "last_image": null,
+      "shot_type": "talking_head"
+    },
+    {
+      "id": 2,
+      "text": "休息时也可以轻柔眨眼，不需要用力挤眼或揉眼。",
+      "scene": "doctor",
+      "action": "Continue the explanation from the preceding final pose with minimal head movement and relaxed hands.",
+      "keypoint": "轻柔眨眼，不挤眼揉眼",
+      "first_image": null,
+      "continue_from": 1,
+      "last_image": null,
+      "shot_type": "talking_head"
+    },
+    {
+      "id": 3,
+      "text": "现在让视线离开屏幕，看向窗外，保持放松。",
+      "scene": "patient",
+      "action": "The patient pauses typing and gently turns his head toward the existing window, then holds a relaxed pose without speaking.",
+      "keypoint": "离开屏幕，保持放松",
+      "first_image": "reference_images/img_000.png",
+      "continue_from": null,
+      "last_image": null,
+      "shot_type": "simple_action"
+    }
+  ]
+}

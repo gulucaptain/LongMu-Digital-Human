@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "longmu-digital-human"
+version = "0.1.0"
+description = "LongMu educational video creation pipeline powered by DiffSynth"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["tomli>=2.0.1; python_version < '3.11'"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["./"]
+include = ["longmu", "longmu.*", "diffsynth", "diffsynth.*"]
+
+[project.scripts]
+longmu = "longmu.cli:main"
+
+[project.optional-dependencies]
+tts = [
+    "qwen-tts",
+    "soundfile",
+    "numpy",
+    "torch",
+    "transformers",
+]
+
+h3 = [
+    "torchaudio",
+    "pillow",
+    "tqdm",
+    "torch>=2.0.0",
+    "torchvision",
+    "transformers",
+    "imageio[ffmpeg]",
+    "safetensors",
+    "einops",
+    "modelscope",
+    "ftfy",
+    "pandas",
+    "accelerate",
+    "peft",
+    "av",
+    "soundfile",
+    "numpy",
+]
+
+all = [
+    "qwen-tts",
+    "soundfile",
+    "numpy",
+    "torch",
+    "transformers",
+    "torchaudio",
+    "pillow",
+    "tqdm",
+    "torch>=2.0.0",
+    "torchvision",
+    "imageio[ffmpeg]",
+    "safetensors",
+    "einops",
+    "modelscope",
+    "ftfy",
+    "pandas",
+    "accelerate",
+    "peft",
+    "av",
+]
+
+[tool.setuptools]
+include-package-data = true

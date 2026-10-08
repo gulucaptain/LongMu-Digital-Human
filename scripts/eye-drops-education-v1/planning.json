@@ -1,0 +1,165 @@
+{
+  "status": "executable_plan_timing_estimated_not_gpu_tested",
+  "scope": "完整步骤的口头教育；实际画面只示意洗手和已开盖持瓶，不是完整滴药操作演示。",
+  "sources": [
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/glaucoma/glaucoma-medicines/how-put-eye-drops",
+      "supports": "洗手、下眼睑口袋、瓶口位置和无接触、医嘱滴数、闭眼轻按内眼角至少一分钟、不同眼药水至少间隔五分钟"
+    }
+  ],
+  "assumptions": [
+    "统一女医生声音；男性操作画面仅旁白，不创建第二种声音。",
+    "男示范者为新素材中的卷发、深灰衬衫人物，不冒充原img_000中的米色衬衫男士。",
+    "无严格整秒承诺；TTS后重新测时长；本次不运行模型。"
+  ],
+  "asset_review": [
+    {
+      "file": "img_002.png",
+      "decision": "用于医生讲解",
+      "observation": "双手放松，桌面有眼球模型和盖好瓶子。"
+    },
+    {
+      "file": "img_011.png",
+      "decision": "用于部分洗手示意",
+      "observation": "深灰袖口、双手肥皂泡和流水已在首帧。"
+    },
+    {
+      "file": "img_008.png",
+      "decision": "用于已开盖持瓶示意",
+      "observation": "白色瓶已开盖，瓶盖在纸巾上；不要求再开盖或摇匀。"
+    },
+    {
+      "file": "img_007.png",
+      "decision": "不进入默认生成计划",
+      "observation": "瓶体近水平，下眼睑口袋不清晰，指尖更像接触眼下皮肤；不能作已确认正确滴药示范。"
+    },
+    {
+      "file": "img_009.png",
+      "decision": "不进入默认生成计划",
+      "observation": "瓶口投影更接近鼻梁一侧，未清晰对准下眼睑口袋；不使用提示词假装已修正首帧。"
+    },
+    {
+      "file": "img_006.png",
+      "decision": "保留候选，未使用",
+      "observation": "闭眼且指尖靠近内眼角，但同时瓶子仍靠脸举起，需核对接触位置与姿势。"
+    },
+    {
+      "file": "img_010.png",
+      "decision": "保留候选，未使用",
+      "observation": "闭眼、瓶子已降低；指尖接触点不够清楚，不能直接认定是正确泪道按压。"
+    }
+  ],
+  "missing_assets": [
+    "清晰下眼睑小口袋，眼睛向上看，手指不压眼球。",
+    "同一药瓶倒置，瓶口明确位于下眼睑口袋上方并保留间隙。",
+    "闭眼时明确在鼻侧内眼角轻按，非眼球或眼下中央皮肤。"
+  ],
+  "continuity": [
+    {
+      "shot": 1,
+      "source": "reference_images/img_002.png",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 2,
+      "source": "clip_01实际未加字幕末帧",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 3,
+      "source": "reference_images/img_011.png",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 4,
+      "source": "reference_images/img_008.png",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 5,
+      "source": "reference_images/img_002.png",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 6,
+      "source": "clip_05实际未加字幕末帧",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 7,
+      "source": "clip_06实际未加字幕末帧",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 8,
+      "source": "reference_images/img_002.png",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    },
+    {
+      "shot": 9,
+      "source": "clip_08实际未加字幕末帧",
+      "tail": null,
+      "reason": "同一讲解续接；准备步骤和章节切换采用新首帧；无需要约束的结束姿势。"
+    }
+  ],
+  "pending_review": [
+    "实际生成中手部结构、瓶口是否被碰触、口型与固定声音一致性。",
+    "操作镜头只作简短示意，不能把五秒镜头当作完整洗手或一分钟按压。",
+    "运行make_prompt目前台词在overall_soundscape，保持真实代码输出；与skill目标风格差异尚未改后端。"
+  ],
+  "source_mapping": [
+    {
+      "shot": 1,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "今天讲解滴眼药水的方法，从用药前准备，到滴完后的处理，一起分步来看。"
+    },
+    {
+      "shot": 2,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "先核对药名、要滴哪只眼和有效期；开封后的使用期限，按说明书确认。"
+    },
+    {
+      "shot": 3,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "用肥皂和清水洗手。这里展示洗手的一部分，实际操作要把双手洗干净。"
+    },
+    {
+      "shot": 4,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "按说明书确认是否需要摇匀。开盖后别碰瓶口，也别让瓶口接触其他物体。"
+    },
+    {
+      "shot": 5,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "坐稳后，头稍后仰，眼睛向上看；轻拉下眼睑，形成一个小口袋。"
+    },
+    {
+      "shot": 6,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "另一只手把药瓶倒置，瓶口悬在小口袋上方，别碰眼睛、眼睑或睫毛。"
+    },
+    {
+      "shot": 7,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "按医嘱，把规定的滴数滴进小口袋。不要为了增加效果，自行多滴。"
+    },
+    {
+      "shot": 8,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "滴完轻轻闭眼，用手指轻按靠鼻侧的内眼角至少一分钟，不要按压眼球。"
+    },
+    {
+      "shot": 9,
+      "source": "用户主题及核验过的操作要点",
+      "rewrite": "同一只眼使用不同眼药水，至少间隔五分钟。具体滴数、次数和顺序，遵医嘱。"
+    }
+  ]
+}

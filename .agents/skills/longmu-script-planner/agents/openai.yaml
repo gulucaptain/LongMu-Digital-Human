@@ -1,0 +1,4 @@
+interface:
+  display_name: "LongMu 剧本与分镜规划"
+  short_description: "将用户剧本整理为适合固定声音TTS与H3生成的项目、分镜和提示词"
+  default_prompt: "使用 $longmu-script-planner 将我的剧本和参考素材转换为当前 LongMu 可执行的 project.json，并检查分段、音频预算和首尾帧续接。"

@@ -1,0 +1,25 @@
+第4集｜干眼吃什么？鱼油是不是必需品？
+
+本目录包含两个明确区分的版本，均保留6段台词及5–10秒单镜预算：
+1. project.json：使用已有img_002.png的医生讲解试生成版。双手裸露、空手、保持身体两侧；只做说话与自然眨眼。背景眼球模型与两只眼药水瓶保持原身份和位置。1→2、3→4、5→6自动继承实际末帧。
+2. project.interaction.draft.json：六段单步交互旁白草案，动作与物体已细化。新首帧分别为1、3、5，目前缺少三张图，尚不可直接生成。准备要求见“补图需求与首帧提示词.txt”，物体和动作记录见interaction_planning.json。不可把已有医生空手图当作这些新首帧。
+
+台词未改写；原稿与执行台词.txt、tts_inputs/与project.json保持一致。第五章只有画面没有台词，仍保留需求、不补写。原稿90秒/每镜15秒并非当前强制目标，最终时长由TTS实测决定。
+
+参考声音：reference_audio_1.mp3约12.56秒，从第一段开始克隆；没有逐字文字时使用仅音色克隆。共用目录只有一条MP3时自动选择，也可按reference_config.snippet.toml显式配置。所有阶段使用同一输出目录；切换声音使用新目录，普通force不换固定声音。
+
+默认流程：准备输入素材和参考录音（文字可选）→TTS→真实音频预算检查→自动生成全部片段/续接→按ID合成→生成完成后统一检查整片和问题片段。中途无需人工尾帧审核；缓存、文件和预算技术校验仍执行。只有用户另有要求时才中途试镜审核。
+
+讲解版服务器命令（从仓库根目录执行）：
+python -m longmu doctor --project scripts/dry-eye-nutrition-ep04-v1/project.json --config configs/runtime.toml --output scripts/dry-eye-nutrition-ep04-v1/runs/reference-audio-1
+python -m longmu run --project scripts/dry-eye-nutrition-ep04-v1/project.json --config configs/runtime.toml --output scripts/dry-eye-nutrition-ep04-v1/runs/reference-audio-1 --stage tts
+python longmu-script-planner/scripts/prepare_project.py --repo . --project scripts/dry-eye-nutrition-ep04-v1/project.json --config configs/runtime.toml --output scripts/dry-eye-nutrition-ep04-v1/runs/reference-audio-1 --use-audio --preview-dir scripts/dry-eye-nutrition-ep04-v1/review_measured
+python -m longmu run --project scripts/dry-eye-nutrition-ep04-v1/project.json --config configs/runtime.toml --output scripts/dry-eye-nutrition-ep04-v1/runs/reference-audio-1 --stage video --gpus 0,1
+
+可直接执行stage video：缺少分段配音时会先生成TTS，再开始视频；已有但过期的缓存需显式处理。GPU编号替换成服务器实际编号；省略--gpus保持单卡。三条续接组件可并行，同组件顺序执行；最终ID始终为1、2、3、4、5、6。分配与状态见runs/reference-audio-1/parallel/manifest.json，各卡日志在同目录。review/是估算提示词预览，实际生成使用当前make_prompt。
+
+交互版：补齐三张图片后，使用project.interaction.draft.json先运行prepare_project.py校验；单独指定--output scripts/dry-eye-nutrition-ep04-v1/runs/interaction-reference-audio-1，全部TTS、审核和video都用该目录。保留原草案与讲解版，不混用两版视频缓存。统一使用同一参考声音，动作画面人物不讲话。当前模板不支持人物明显操作同时出镜口播，因此交互版采用画外旁白。
+
+完成后检查：讲解版看手中新增物体、双手姿势和背景道具；交互版看瓶子外形/数量、左右手与握法、餐盘/食物支持关系、放瓶与接缝；两版都检查发音、口型、字幕和医学表述。发现错误时定位首次错误镜头及其continue_from后续依赖，修正提示词/输入后只重做受影响部分。修改动作会让已有视频缓存过期；台词与声音请求未变时可继续校验复用已有TTS。不用all --force修复单个视频。
+
+鱼油试验的中重度干眼限定和原有事实来源保留在planning.json；本次只调整视觉规划，没有新增医学结论。当前未运行TTS/H3，也未生成新参考图片。

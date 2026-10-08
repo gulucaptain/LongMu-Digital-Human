@@ -1,0 +1,107 @@
+{
+  "planning_version": 1,
+  "project_id": "screen-rest",
+  "purpose": "审核辅助信息，不是LongMu运行接口",
+  "source_mapping": [
+    {
+      "source_excerpt": "长时间看屏幕，可以安排短暂休息，让视线离开近处。",
+      "shot_ids": [
+        1
+      ]
+    },
+    {
+      "source_excerpt": "休息时也可以轻柔眨眼，不需要用力挤眼或揉眼。",
+      "shot_ids": [
+        2
+      ]
+    },
+    {
+      "source_excerpt": "现在让视线离开屏幕，看向窗外，保持放松。",
+      "shot_ids": [
+        3
+      ]
+    }
+  ],
+  "assumptions": [
+    "竖屏576×1024",
+    "一套统一女声，患者镜头画外旁白"
+  ],
+  "continuity": [
+    {
+      "shot_id": 2,
+      "reason": "同一讲解继续，使用镜头1实际末帧，不强制回归肖像尾帧"
+    },
+    {
+      "shot_id": 3,
+      "reason": "切换到患者生活场景，使用独立首帧"
+    }
+  ],
+  "asset_requirements": [
+    {
+      "path": "assets/reference_images/img_002.png",
+      "must_show": "女医生白大褂和蓝衬衫，双手放松",
+      "status": "待核对并复制素材"
+    },
+    {
+      "path": "assets/reference_images/img_000.png",
+      "must_show": "男士、笔记本电脑和左侧窗户",
+      "status": "待核对并复制素材"
+    }
+  ],
+  "review_items": [
+    "TTS发音与真实时长",
+    "口型与接缝",
+    "窗户方向和人物轻微动作",
+    "专业内容审核与改写保真"
+  ],
+  "unsupported_requirements": [],
+  "timing": {
+    "basis": "初步规划，须TTS实测",
+    "strict_total_duration_guaranteed": false
+  },
+  "visual_review": {
+    "status": "pending",
+    "checks": [
+      "首尾图人物、服装、道具与场景一致",
+      "主动作与全局限制无冲突",
+      "实际居中裁切保留操作部位",
+      "字幕不遮挡关键区域"
+    ],
+    "timing": "输入图片核对在生成前；生成画面和末帧检查在成片完成后"
+  },
+  "action_review": [
+    {
+      "shot_id": 3,
+      "operator": "男士",
+      "initial_state": "坐在电脑前",
+      "main_action": "停止打字并转头看已有窗户",
+      "end_state": "视线离开屏幕，保持放松",
+      "completion_visible": "可见头部转向窗户",
+      "contact_constraints": "无医疗接触动作",
+      "timing": "不承诺词级同步",
+      "interaction_object": "laptop_01；人物停止操作电脑后转向已有窗户",
+      "hand_state": "按首帧已有双手姿势自然停下，保持桌面支撑",
+      "review_timing": "全部视频生成完成后"
+    }
+  ],
+  "review_policy": {
+    "during_generation": "automatic_no_manual_frame_gate",
+    "after_generation": "full_video_and_flagged_clips",
+    "input_asset_review": "before_generation",
+    "runtime_consumed": false
+  },
+  "object_registry": [
+    {
+      "object_id": "laptop_01",
+      "appearance": "首帧中的同一台笔记本电脑；外观、大小和位置以参考图为准",
+      "source": "reference_image",
+      "initial_location": "桌面",
+      "first_shot": 3,
+      "persist_in_shots": [
+        3
+      ],
+      "expected_end_state": "电脑保持桌面原位；人物完成转头并保持姿势",
+      "runtime_consumed": false
+    }
+  ]
+}

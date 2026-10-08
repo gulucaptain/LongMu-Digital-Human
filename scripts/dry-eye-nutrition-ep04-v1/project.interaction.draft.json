@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "project_id": "dry-eye-nutrition-ep04-v1",
+  "title": "第4集｜干眼吃什么？鱼油是不是必需品？（交互旁白草案，待补首帧）",
+  "asset_root": "assets",
+  "characters": {
+    "demonstrator": {
+      "description": "the same Chinese female doctor as the identity reference img_002.png, with dark hair tied back and the same white coat over a light-blue shirt; in medium views her lips remain gently closed while a single off-screen narrator delivers the speech; close-up views preserve her bare hands and the same coat sleeves",
+      "speech_mode": "voiceover"
+    }
+  },
+  "visual_constraints": "Live-action medical education with a single off-screen narrator. Preserve the supplied identity, clothing, lighting, visible object shapes and colors. The demonstrator performs only the stated single action from the supplied visible start state and settles into the stated steady end state. The camera remains fixed. All teaching containers have plain surfaces and remain capped; all food stays in the existing dishes. Caption text is added in post-production.",
+  "notice": "",
+  "settings": {
+    "width": 576,
+    "height": 1024,
+    "fps": 24,
+    "min_video_seconds": 5,
+    "max_video_seconds": 10,
+    "tts_language": "Chinese",
+    "tts_speaker": "Serena",
+    "tts_instruct": "标准普通话，清晰自然的医疗科普讲解，语气专业亲切。",
+    "tts_tempo": 1.0,
+    "burn_subtitles": true,
+    "show_keypoints": false,
+    "save_progress_after_each_clip": true
+  },
+  "shots": [
+    {
+      "id": 1,
+      "text": "得了干眼，是不是要赶紧补鱼油、维生素、叶黄素？先别急着买一堆保健品。",
+      "scene": "demonstrator",
+      "shot_type": "simple_action",
+      "first_image": "reference_images/nutrition_intro_start.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The demonstrator starts with the small cylindrical amber teaching bottle held upright in her right hand at chest level, matching the supplied first frame. The bottle has a round white screw cap and a plain amber body. Her right fingers hold its body below the cap. She slowly lowers this same bottle vertically onto the existing shallow beige tray on the table, releases it when its flat base rests securely, and settles her right hand beside the tray. Her bare left hand stays resting beside the existing white meal plate. Finish with the bottle upright on the tray, the plate still on the table, and both hands visible. The narration is off-screen and her lips remain gently closed.",
+      "keypoint": "先了解是否需要"
+    },
+    {
+      "id": 2,
+      "text": "保健品并不能替代查明病因和规范治疗。",
+      "scene": "demonstrator",
+      "shot_type": "simple_action",
+      "first_image": null,
+      "continue_from": 1,
+      "last_image": null,
+      "action": "Begin from the preceding actual final frame. Preserve the same upright amber bottle, round white cap and beige tray in their visible positions. The demonstrator places her bare left fingertips on the outside rim of the existing round white meal plate and slides the plate a short distance toward the center of the table, keeping it flat and all food supported. Her right hand remains beside the tray. Finish with the plate settled flat, left fingertips lightly resting on its outer rim, and the bottle still visible on its tray. The narration is off-screen and her lips remain gently closed.",
+      "keypoint": "查明病因，规范治疗"
+    },
+    {
+      "id": 3,
+      "text": "更实用的是保持均衡饮食，蔬菜、水果、全谷物和优质蛋白合理搭配。",
+      "scene": "demonstrator",
+      "shot_type": "simple_action",
+      "first_image": "reference_images/nutrition_meal_start.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "In the supplied overhead composition, preserve the round white meal plate with existing vegetables, fruit, whole grains and a cooked fish portion, the small white nut bowl and the clear water glass in their shown positions. The demonstrator's bare right hand starts beside the plate, with the same white-coat sleeve visible. With an open relaxed hand held above the food, she makes one slow presentation sweep over the vegetable, fruit and grain sections, keeping fingertips visibly separated from the food, and settles her hand beside the grain section. Her left hand stays at its starting table position. Finish with both hands visible and every dish in its starting position.",
+      "keypoint": "保持均衡饮食"
+    },
+    {
+      "id": 4,
+      "text": "适量吃鱼和坚果，注意正常补水，避免极端节食。",
+      "scene": "demonstrator",
+      "shot_type": "simple_action",
+      "first_image": null,
+      "continue_from": 3,
+      "last_image": null,
+      "action": "Begin from the preceding actual overhead final frame. Preserve the same white plate, its food portions, the same nut bowl and water glass, and the current right-hand position beside the grain section. The demonstrator gently moves her open right hand over the adjacent cooked fish portion and nut bowl as one presentation gesture, with fingertips visibly separated from the food. She settles the hand beside the plate. Her left hand remains in its visible starting position. Finish with the plate, nut bowl and glass still in place; the narration remains off-screen.",
+      "keypoint": "适量吃鱼和坚果"
+    },
+    {
+      "id": 5,
+      "text": "鱼油对干眼的研究结果并不一致。一项中重度干眼的大型随机试验中，补充鱼油未优于对照组。",
+      "scene": "demonstrator",
+      "shot_type": "simple_action",
+      "first_image": "reference_images/nutrition_bottle_start.png",
+      "continue_from": null,
+      "last_image": null,
+      "action": "The demonstrator starts with the same specified small cylindrical amber teaching bottle already held upright in her bare right hand at chest level, as shown in the supplied first frame. It has a plain amber body and a round white screw cap, and her fingers hold the body below the cap. She gently brings this same bottle a short distance toward the center of the frame, preserving its upright orientation and grip, then holds it steady. Her bare left hand rests on the table beside the existing blank assessment card. The shallow beige tray remains visible beside the card. Finish with the bottle clearly visible in the same steady grip. The narration is off-screen and her lips remain gently closed.",
+      "keypoint": "该试验未见优于对照组"
+    },
+    {
+      "id": 6,
+      "text": "得了干眼并非必须吃鱼油，也不能保证有效。是否需要补充，应结合个人情况和医生判断。",
+      "scene": "demonstrator",
+      "shot_type": "simple_action",
+      "first_image": null,
+      "continue_from": 5,
+      "last_image": null,
+      "action": "Begin from the preceding actual final frame. Preserve the visible amber bottle, its round white cap, the demonstrator's right-hand grip, the beige tray and the blank assessment card. She slowly lowers the same upright bottle onto the tray beside the card, releases it once its flat base is securely supported, and rests her right hand beside the tray. Her left hand stays beside the card in its preceding visible pose. Finish with the capped bottle standing steadily on the tray, the card fully visible and both hands supported by the table. The narration is off-screen and her lips remain gently closed.",
+      "keypoint": "结合个人情况判断"
+    }
+  ]
+}
