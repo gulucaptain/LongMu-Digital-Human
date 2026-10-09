@@ -1,0 +1,15 @@
+Seedance静态参考图脚本，共5张独立首帧和2张局部编辑尾帧。
+
+1. 上传assets/reference_images/doctor.png，运行consultation_cards_start.txt；确认医生与患者身份，固定该首图。
+2. 后续人物沿用首张实际图中的身份；可裁出患者身份参考供跨场景复用。
+3. 运行consultation_form_start.txt，确认首图后用实际首图作为编辑基底运行consultation_form_end.txt。
+4. 运行assessment_start.txt。
+5. 运行feedback_start.txt，确认后用实际首图作为编辑基底运行feedback_end.txt。
+6. 运行home_care_start.txt。
+7. 将图片按脚本标明名称保存到项目assets/reference_images/，检查同构图、人物、道具、关键部位裁切。
+8. 图片核对后再运行prepare_project.py检查project.interaction.draft.json；通过素材与预算检查后才启动TTS/视频。
+
+复用：镜头1→2共用卡片组；3→4共用问询单记录组；5→6共用咨询评估组；7抬手反馈使用一对图；8→9共用居家说明单组。后续片段首帧由前片实际末帧自动续接，不为每段另做图。
+目标尾图仅用于镜头3、7；不得将未查看的生成图视为合格配对。
+
+不包含分镜五台词及分镜六至十：截图原文缺失，待补齐后扩展。原稿精细医疗操作仍需经确认素材，本组仅生成咨询与反馈画面。

@@ -1,0 +1,9 @@
+{
+  "status": "project_validated_timing_estimated",
+  "validator_exit_code": 0,
+  "visual_review_required": true,
+  "prompt_style": "concise",
+  "timing_basis": "estimated_not_measured",
+  "images_present": true,
+  "gpu_inference_performed": false
+}

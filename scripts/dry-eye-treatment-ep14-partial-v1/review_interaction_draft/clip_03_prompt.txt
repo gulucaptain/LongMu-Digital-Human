@@ -1,0 +1,7 @@
+Use <Picture 1> as the starting image for [Shot 1]. Use <Picture 2> as the ending image for the same shot.
+
+integrated_multimodal_description: [Shot 1] Live-action medical education. The female doctor sits across from the female patient, holding a dark pen in her right hand above the white form; her left hand rests on the lower edge of the paper. Begin with the supplied composition and pose. While speaking, the doctor makes one short writing stroke on the existing form with her right hand. Her left hand keeps the paper supported. The patient listens quietly with closed lips and both hands on her lap. The white case and small white bottle remain on the table. The on-camera speaker delivers the supplied dialogue with natural lip and jaw articulation. (S1) says: <d>[Chinese] 治疗前摘掉隐形眼镜，按要求清除眼妆。近期眼部手术、感染，都要如实告知。</d> Complete the stated movement in the supplied ending pose. Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.
+
+overall_soundscape: Preserve the supplied voice, words, pacing and pauses. No additional voices or ambient sounds.
+
+non_diegetic_music: No background music.

@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "project_id": "dry-eye-treatment-ep14-interaction-partial-v1",
+  "title": "第14集：干眼物理治疗前后配合（截图可见内容·交互草案，缺素材）",
+  "asset_root": "assets",
+  "characters": {
+    "doctor_cards": {
+      "description": "The female doctor holds three pale blue, green and peach cards in her left hand; the seated female patient faces her across the consultation table",
+      "speech_mode": "on_camera"
+    },
+    "doctor_form": {
+      "description": "The female doctor sits across from the female patient, holding a dark pen in her right hand above the white form; her left hand rests on the lower edge of the paper",
+      "speech_mode": "on_camera"
+    },
+    "doctor_assessment": {
+      "description": "The female doctor and female patient sit facing each other across the consultation table; the doctor has both hands on the table and the patient has both hands on her lap",
+      "speech_mode": "on_camera"
+    },
+    "patient_feedback": {
+      "description": "The female patient sits in the foreground with both hands on her lap; the female doctor stands in the background",
+      "speech_mode": "voiceover"
+    },
+    "patient_home": {
+      "description": "The female patient sits at the home table, holding the lower sides of a white sheet with both hands",
+      "speech_mode": "voiceover"
+    }
+  },
+  "settings": {
+    "width": 576,
+    "height": 1024,
+    "fps": 24,
+    "min_video_seconds": 5,
+    "max_video_seconds": 10,
+    "audio_lead_seconds": 0.08,
+    "audio_tail_seconds": 0.16,
+    "tts_language": "Chinese",
+    "tts_tempo": 1.0,
+    "burn_subtitles": true,
+    "show_keypoints": false,
+    "save_progress_after_each_clip": true,
+    "video_prompt_style": "concise"
+  },
+  "visual_constraints": "Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.",
+  "notice": "",
+  "shots": [
+    {
+      "id": 1,
+      "text": "干眼物理治疗，做完就不用管了吗？既要选对项目，也要做好治疗前后的配合。",
+      "scene": "doctor_cards",
+      "shot_type": "speaking_action",
+      "first_image": "reference_images/consultation_cards_start.png",
+      "last_image": null,
+      "continue_from": null,
+      "action": "The doctor gently tilts the same three cards toward the viewer without changing her left-hand grip. Her right hand stays relaxed. Only the doctor speaks; the patient listens quietly with closed lips and keeps her hands on the table.",
+      "keypoint": "选对项目，配合治疗"
+    },
+    {
+      "id": 2,
+      "text": "后续用药、护理和复查，都需要按医嘱安排，做好治疗前后的配合。",
+      "scene": "doctor_cards",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 1,
+      "action": "The doctor continues speaking while holding the same cards in their current position. Her breathing and blinking remain natural. The patient listens quietly with closed lips and keeps her current hand position.",
+      "keypoint": "用药护理复查遵医嘱"
+    },
+    {
+      "id": 3,
+      "text": "治疗前摘掉隐形眼镜，按要求清除眼妆。近期眼部手术、感染，都要如实告知。",
+      "scene": "doctor_form",
+      "shot_type": "speaking_action",
+      "first_image": "reference_images/consultation_form_start.png",
+      "last_image": "reference_images/consultation_form_end.png",
+      "continue_from": null,
+      "action": "While speaking, the doctor makes one short writing stroke on the existing form with her right hand. Her left hand keeps the paper supported. The patient listens quietly with closed lips and both hands on her lap. The white case and small white bottle remain on the table.",
+      "keypoint": "摘镜清妆，如实告知病史"
+    },
+    {
+      "id": 4,
+      "text": "眼部外伤，以及正在使用的药物，也要完整、准确地告诉医生。",
+      "scene": "doctor_form",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 3,
+      "action": "The doctor continues speaking with the same pen in her right hand and her left hand resting on the form. She maintains the current hand position with subtle breathing and blinking. The patient listens quietly with closed lips and both hands on her lap.",
+      "keypoint": "外伤用药完整告知"
+    },
+    {
+      "id": 5,
+      "text": "如果有明显红痛、分泌物增多，或眼周皮肤破损，请先告诉医生。",
+      "scene": "doctor_assessment",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/assessment_start.png",
+      "last_image": null,
+      "continue_from": null,
+      "action": "Only the doctor speaks. She briefly shifts her gaze toward the patient while keeping both hands supported on the table. The patient remains silent with closed lips and both hands on her lap. The eye model and small bottles stay in place.",
+      "keypoint": "异常症状及时告知"
+    },
+    {
+      "id": 6,
+      "text": "是否需要延期，要先由医生评估。不要为了赶进度，把这些情况隐瞒下来。",
+      "scene": "doctor_assessment",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 5,
+      "action": "Only the doctor continues speaking with natural facial articulation and blinking, keeping both hands on the table. The patient remains silent with closed lips and retains her seated pose. The eye model and small bottles stay in place.",
+      "keypoint": "是否延期由医生评估"
+    },
+    {
+      "id": 7,
+      "text": "睑板腺按摩不是越痛越有效，明显疼痛要及时说，向医护人员反馈。",
+      "scene": "patient_feedback",
+      "shot_type": "simple_action",
+      "first_image": "reference_images/feedback_start.png",
+      "last_image": "reference_images/feedback_end.png",
+      "continue_from": null,
+      "action": "The patient smoothly raises her right hand from her lap to shoulder height to signal discomfort. Her left hand stays on her lap, and her raised hand remains separate from her eyes. The doctor stays in the background without speaking. Existing table objects stay in place.",
+      "keypoint": "明显疼痛及时反馈"
+    },
+    {
+      "id": 8,
+      "text": "回家别模仿器械操作，也不要用力挤眼皮。后续护理仍要按医嘱安排。",
+      "scene": "patient_home",
+      "shot_type": "simple_action",
+      "first_image": "reference_images/home_care_start.png",
+      "last_image": null,
+      "continue_from": null,
+      "action": "The patient gently lowers her gaze toward the sheet while keeping both hands on its lower sides. She reads silently with closed lips and natural breathing. The sheet, clipboard and other desk objects retain their shapes and positions.",
+      "keypoint": "不自行模仿器械操作"
+    },
+    {
+      "id": 9,
+      "text": "如果用了表面麻醉，感觉恢复前别揉眼，回家也不要自行模仿器械操作。",
+      "scene": "patient_home",
+      "shot_type": "simple_action",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 8,
+      "action": "The patient continues reading the same sheet silently with closed lips and subtle breathing. Both hands maintain their current grip. The sheet, clipboard and other desk objects retain their shapes and positions.",
+      "keypoint": "麻醉感觉恢复前不揉眼"
+    }
+  ]
+}

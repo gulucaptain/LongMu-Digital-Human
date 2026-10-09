@@ -1,0 +1,7 @@
+Use <Picture 1> as the starting image for [Shot 1].
+
+integrated_multimodal_description: [Shot 1] Live-action medical education. The reference-matched Chinese female doctor stands in the consultation room, with tied-back dark hair, a white coat and a light-blue shirt; her empty hands rest at her sides. Continue from the supplied preceding final frame, retaining the visible pose and object positions. The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions. The on-camera speaker delivers the supplied dialogue with natural lip and jaw articulation. (S1) says: <d>[Chinese] 如果用了表面麻醉，感觉恢复前别揉眼，回家也不要自行模仿器械操作。</d>  Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.
+
+overall_soundscape: Preserve the supplied voice, words, pacing and pauses. No additional voices or ambient sounds.
+
+non_diegetic_music: No background music.

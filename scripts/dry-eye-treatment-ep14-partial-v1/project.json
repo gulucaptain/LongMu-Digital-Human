@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "project_id": "dry-eye-treatment-ep14-partial-v1",
+  "title": "第14集：干眼物理治疗前后配合（截图可见内容·讲解版）",
+  "asset_root": "assets",
+  "characters": {
+    "doctor": {
+      "description": "The reference-matched Chinese female doctor stands in the consultation room, with tied-back dark hair, a white coat and a light-blue shirt; her empty hands rest at her sides",
+      "speech_mode": "on_camera"
+    }
+  },
+  "settings": {
+    "width": 576,
+    "height": 1024,
+    "fps": 24,
+    "min_video_seconds": 5,
+    "max_video_seconds": 10,
+    "audio_lead_seconds": 0.08,
+    "audio_tail_seconds": 0.16,
+    "tts_language": "Chinese",
+    "tts_tempo": 1.0,
+    "burn_subtitles": true,
+    "show_keypoints": false,
+    "save_progress_after_each_clip": true,
+    "video_prompt_style": "concise"
+  },
+  "visual_constraints": "Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.",
+  "notice": "",
+  "shots": [
+    {
+      "id": 1,
+      "text": "干眼物理治疗，做完就不用管了吗？既要选对项目，也要做好治疗前后的配合。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/doctor.png",
+      "last_image": null,
+      "continue_from": null,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "选对项目，配合治疗"
+    },
+    {
+      "id": 2,
+      "text": "后续用药、护理和复查，都需要按医嘱安排，做好治疗前后的配合。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 1,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "用药护理复查遵医嘱"
+    },
+    {
+      "id": 3,
+      "text": "治疗前摘掉隐形眼镜，按要求清除眼妆。近期眼部手术、感染，都要如实告知。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/doctor.png",
+      "last_image": null,
+      "continue_from": null,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "摘镜清妆，如实告知病史"
+    },
+    {
+      "id": 4,
+      "text": "眼部外伤，以及正在使用的药物，也要完整、准确地告诉医生。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 3,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "外伤用药完整告知"
+    },
+    {
+      "id": 5,
+      "text": "如果有明显红痛、分泌物增多，或眼周皮肤破损，请先告诉医生。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/doctor.png",
+      "last_image": null,
+      "continue_from": null,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "异常症状及时告知"
+    },
+    {
+      "id": 6,
+      "text": "是否需要延期，要先由医生评估。不要为了赶进度，把这些情况隐瞒下来。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 5,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "是否延期由医生评估"
+    },
+    {
+      "id": 7,
+      "text": "睑板腺按摩不是越痛越有效，明显疼痛要及时说，向医护人员反馈。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": "reference_images/doctor.png",
+      "last_image": null,
+      "continue_from": null,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "明显疼痛及时反馈"
+    },
+    {
+      "id": 8,
+      "text": "回家别模仿器械操作，也不要用力挤眼皮。后续护理仍要按医嘱安排。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 7,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "不自行模仿器械操作"
+    },
+    {
+      "id": 9,
+      "text": "如果用了表面麻醉，感觉恢复前别揉眼，回家也不要自行模仿器械操作。",
+      "scene": "doctor",
+      "shot_type": "talking_head",
+      "first_image": null,
+      "last_image": null,
+      "continue_from": 8,
+      "action": "The doctor speaks to the viewer with natural lip and jaw articulation, blinking and gentle breathing. Her hands remain relaxed at her sides. The anatomical eye model and small bottles remain in their supplied positions.",
+      "keypoint": "麻醉感觉恢复前不揉眼"
+    }
+  ]
+}

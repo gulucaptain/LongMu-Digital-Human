@@ -1,0 +1,7 @@
+Use <Picture 1> as the starting image for [Shot 1].
+
+integrated_multimodal_description: [Shot 1] Live-action medical education. The female patient sits at the home table, holding the lower sides of a white sheet with both hands. Continue from the supplied preceding final frame, retaining the visible pose and object positions. The patient continues reading the same sheet silently with closed lips and subtle breathing. Both hands maintain their current grip. The sheet, clipboard and other desk objects retain their shapes and positions. The visible people remain silent with naturally closed lips. (S1) says in an off-screen voiceover: <d>[Chinese] 如果用了表面麻醉，感觉恢复前别揉眼，回家也不要自行模仿器械操作。</d>  Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.
+
+overall_soundscape: Preserve the supplied voice, words, pacing and pauses. No additional voices or ambient sounds.
+
+non_diegetic_music: No background music.

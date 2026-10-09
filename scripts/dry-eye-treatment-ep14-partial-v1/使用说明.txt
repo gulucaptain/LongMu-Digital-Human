@@ -1,0 +1,35 @@
+第14集：截图可见内容的模型适配剧本
+本项目是部分内容，不能作为完整第14集或150秒成片交付。
+
+讲解版：9镜头，估算60.667秒；总补齐尾部静音约4.613秒（不含TTS自身静音）。
+project.json使用已查看的现有女医生图，单首帧模式，没有目标尾图。
+续接1→2、3→4、5→6、7→8→9；3、5、7是章节边界的明确切镜，复用同一医生首图，不宣称无缝续接。
+
+交互版：project.interaction.draft.json保留问询、记录、异常评估、举手反馈和居家阅读意图。缺5张独立首图和2张目标尾图，共7张；当前不可直接运行。
+交互镜头3、7计划用首尾双帧，补图后须核对成对机位/人物/道具一致性。
+精细按摩、摘镜/卸妆和眼部接触检查不以未审核的生成动作冒充示范；原稿意图与缺项见planning.json。
+
+输入覆盖：分镜一至四的完整台词。分镜五只有画面说明，台词及六至十缺失，未补写。
+参考声音：assets/reference_audios/reference_audio_1.mp3；项目统一声音，无逐字文字，第一镜起Base仅音色克隆。
+
+校验：讲解版通过真实prepare_project.py项目校验和估算预算；review目录包含三段式H3提示词及CSV分镜表。
+交互草案真实校验因缺图失败；review_interaction_draft仅为真实make_prompt生成的未验证预览，不能用于声称就绪。
+
+时长和节奏：每镜01=7.292秒、02=6.583秒、03=7.292秒、04=5.875秒、05=5.875秒、06=7.292秒、07=6.583秒、08=6.583秒、09=7.292秒。
+部分镜头补齐尾部超过0.5秒，TTS后结合实际停顿再调分段；当前compose不自动去静音，不拖慢声音凑150秒。
+
+后续运行（仅讲解版可先行；交互版须补图）：
+python -m longmu run --project scripts/dry-eye-treatment-ep14-partial-v1/project.json --config configs/runtime.toml --stage tts
+python longmu-script-planner/scripts/prepare_project.py --repo . --project scripts/dry-eye-treatment-ep14-partial-v1/project.json --use-audio --preview-dir scripts/dry-eye-treatment-ep14-partial-v1/review_measured
+python -m longmu run --project scripts/dry-eye-treatment-ep14-partial-v1/project.json --config configs/runtime.toml --stage video
+服务器需真实部署TOML，以上实测预览默认读取项目runs/default；若用了--output，所有步骤须同步。
+
+生成前核对输入图和医学文案；本次只是忠实改写，未独立核验医学事实。
+生成过程中自动续接，无逐镜人工尾帧门槛；生成后统一检查发音、声音、口型、人物和道具、接缝、字幕、医疗操作与依赖继承问题。
+未启动TTS或H3。
+
+Seedance参考图脚本已补齐：seedance_prompts/使用顺序.txt；5张首帧、2张局部编辑尾帧，实际图片尚未生成。
+
+Seedance集中独立文本：Seedance图像提示词.txt。医生统一引用仓库img_002.png（本项目doctor.png为其副本）。
+
+视频prompt已启用video_prompt_style=concise：删除数字时长和制作流程说明，按当前输入图明确人物、单步动作和说话主体。请同步longmu/config.py、longmu/stages/video.py及项目JSON到服务器。已有TTS可复用，旧视频prompt缓存会失效；重做视频用--stage video --force，保持原输出目录。图片中的文字和背景虚焦本次未修改。

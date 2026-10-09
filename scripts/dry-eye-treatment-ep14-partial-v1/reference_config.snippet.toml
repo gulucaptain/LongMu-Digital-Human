@@ -1,0 +1,4 @@
+# 将此配置合入部署TOML；相对路径基于最终部署TOML所在目录。
+# 共用目录只有一条MP3时，运行代码也会自动选择。
+# reference_source_audio = "../assets/longmu/reference_audios/reference_audio_1.mp3"
+# 无已核对逐字文字，不填写reference_source_text；从第一镜开始仅音色Base克隆。

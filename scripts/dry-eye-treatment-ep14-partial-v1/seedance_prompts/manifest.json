@@ -1,0 +1,114 @@
+{
+  "project_id": "dry-eye-treatment-ep14-partial-v1",
+  "status": "draft_missing_assets",
+  "images": [
+    {
+      "prompt": "consultation_cards_start.txt",
+      "output": "assets/reference_images/consultation_cards_start.png",
+      "shot_ids": [
+        1,
+        2
+      ],
+      "mode": "new_scene_from_identity_reference",
+      "references": [
+        "assets/reference_images/doctor.png"
+      ],
+      "status": "prompt_only_image_not_generated",
+      "content": "pure_current_image_description",
+      "patient_appearance": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤"
+    },
+    {
+      "prompt": "consultation_form_start.txt",
+      "output": "assets/reference_images/consultation_form_start.png",
+      "shot_ids": [
+        3,
+        4
+      ],
+      "mode": "new_scene_from_identity_reference",
+      "references": [
+        "assets/reference_images/doctor.png",
+        "已确认consultation_cards_start.png中的患者身份参考；优先使用同图裁出的患者身份图"
+      ],
+      "status": "prompt_only_image_not_generated",
+      "content": "pure_current_image_description",
+      "patient_appearance": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤"
+    },
+    {
+      "prompt": "consultation_form_end.txt",
+      "output": "assets/reference_images/consultation_form_end.png",
+      "shot_ids": [
+        3
+      ],
+      "mode": "edit_actual_start_frame",
+      "references": [
+        "assets/reference_images/consultation_form_start.png"
+      ],
+      "status": "prompt_only_image_not_generated",
+      "content": "pure_current_image_description",
+      "patient_appearance": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤"
+    },
+    {
+      "prompt": "assessment_start.txt",
+      "output": "assets/reference_images/assessment_start.png",
+      "shot_ids": [
+        5,
+        6
+      ],
+      "mode": "new_scene_from_identity_reference",
+      "references": [
+        "assets/reference_images/doctor.png",
+        "已确认consultation_cards_start.png中的患者身份参考；优先使用同图裁出的患者身份图"
+      ],
+      "status": "prompt_only_image_not_generated",
+      "content": "pure_current_image_description",
+      "patient_appearance": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤"
+    },
+    {
+      "prompt": "feedback_start.txt",
+      "output": "assets/reference_images/feedback_start.png",
+      "shot_ids": [
+        7
+      ],
+      "mode": "new_scene_from_identity_reference",
+      "references": [
+        "assets/reference_images/doctor.png",
+        "已确认consultation_cards_start.png中的患者身份参考；优先使用同图裁出的患者身份图"
+      ],
+      "status": "prompt_only_image_not_generated",
+      "content": "pure_current_image_description",
+      "patient_appearance": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤"
+    },
+    {
+      "prompt": "feedback_end.txt",
+      "output": "assets/reference_images/feedback_end.png",
+      "shot_ids": [
+        7
+      ],
+      "mode": "edit_actual_start_frame",
+      "references": [
+        "assets/reference_images/feedback_start.png"
+      ],
+      "status": "prompt_only_image_not_generated",
+      "content": "pure_current_image_description",
+      "patient_appearance": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤"
+    },
+    {
+      "prompt": "home_care_start.txt",
+      "output": "assets/reference_images/home_care_start.png",
+      "shot_ids": [
+        8,
+        9
+      ],
+      "mode": "new_scene_from_identity_reference",
+      "references": [
+        "已确认consultation_cards_start.png中的患者身份参考"
+      ],
+      "status": "prompt_only_image_not_generated",
+      "content": "pure_current_image_description",
+      "patient_appearance": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤"
+    }
+  ],
+  "provider": "Seedance平台，用户导出实际图片；本次未调用平台",
+  "consolidated_text": "../Seedance图像提示词.txt",
+  "prompt_files_content": "正文纯文本；所有操作说明在集中交付文件"
+}

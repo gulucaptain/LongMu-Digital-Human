@@ -1,0 +1,7 @@
+Use <Picture 1> as the starting image for [Shot 1].
+
+integrated_multimodal_description: [Shot 1] Live-action medical education. The female doctor and female patient sit facing each other across the consultation table; the doctor has both hands on the table and the patient has both hands on her lap. Begin with the supplied composition and pose. Only the doctor speaks. She briefly shifts her gaze toward the patient while keeping both hands supported on the table. The patient remains silent with closed lips and both hands on her lap. The eye model and small bottles stay in place. The on-camera speaker delivers the supplied dialogue with natural lip and jaw articulation. (S1) says: <d>[Chinese] 如果有明显红痛、分泌物增多，或眼周皮肤破损，请先告诉医生。</d>  Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.
+
+overall_soundscape: Preserve the supplied voice, words, pacing and pauses. No additional voices or ambient sounds.
+
+non_diegetic_music: No background music.

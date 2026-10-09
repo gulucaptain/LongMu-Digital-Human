@@ -1,0 +1,7 @@
+Use <Picture 1> as the starting image for [Shot 1].
+
+integrated_multimodal_description: [Shot 1] Live-action medical education. The female doctor holds three pale blue, green and peach cards in her left hand; the seated female patient faces her across the consultation table. Continue from the supplied preceding final frame, retaining the visible pose and object positions. The doctor continues speaking while holding the same cards in their current position. Her breathing and blinking remain natural. The patient listens quietly with closed lips and keeps her current hand position. The on-camera speaker delivers the supplied dialogue with natural lip and jaw articulation. (S1) says: <d>[Chinese] 后续用药、护理和复查，都需要按医嘱安排，做好治疗前后的配合。</d>  Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.
+
+overall_soundscape: Preserve the supplied voice, words, pacing and pauses. No additional voices or ambient sounds.
+
+non_diegetic_music: No background music.

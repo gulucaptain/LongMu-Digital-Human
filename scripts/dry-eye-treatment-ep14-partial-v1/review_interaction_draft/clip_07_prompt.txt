@@ -1,0 +1,7 @@
+Use <Picture 1> as the starting image for [Shot 1]. Use <Picture 2> as the ending image for the same shot.
+
+integrated_multimodal_description: [Shot 1] Live-action medical education. The female patient sits in the foreground with both hands on her lap; the female doctor stands in the background. Begin with the supplied composition and pose. The patient smoothly raises her right hand from her lap to shoulder height to signal discomfort. Her left hand stays on her lap, and her raised hand remains separate from her eyes. The doctor stays in the background without speaking. Existing table objects stay in place. The visible people remain silent with naturally closed lips. (S1) says in an off-screen voiceover: <d>[Chinese] 睑板腺按摩不是越痛越有效，明显疼痛要及时说，向医护人员反馈。</d> Complete the stated movement in the supplied ending pose. Keep the supplied people, room, lighting and existing object appearances consistent. Fixed camera, one continuous shot. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.
+
+overall_soundscape: Preserve the supplied voice, words, pacing and pauses. No additional voices or ambient sounds.
+
+non_diegetic_music: No background music.

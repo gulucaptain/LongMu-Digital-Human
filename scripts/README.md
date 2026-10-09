@@ -8,6 +8,7 @@
 | [eye-drops-education-v1](eye-drops-education-v1/剧本.txt) | 滴眼药水：医生讲解与准备步骤示意 | 已校验输入；未运行模型；精细滴药素材待修正 |
 | [dry-eye-nutrition-ep04-v1](dry-eye-nutrition-ep04-v1/原稿与执行台词.txt) | 第4集干眼饮食与鱼油：6段讲解版及6段交互旁白草案 | 讲解版已校验；交互版待3张首帧；参考音频逐字文字待补；未运行模型 |
 | [contact-lens-water-v1](contact-lens-water-v1/剧本.txt) | 隐形眼镜远离水：4段医生边讲边示范、两组续接，第1/3段首尾双帧 | 4张输入图已导入核对；预计29.875秒；未运行TTS/H3 |
+| [dry-eye-treatment-ep14-partial-v1](dry-eye-treatment-ep14-partial-v1/原文与适配台词.txt) | 第14集物理治疗前后配合：截图分镜一至四，9段讲解版及交互草案 | 讲解版通过估算校验；交互版缺7张图；分镜五台词及六至十原稿待补；未运行TTS/H3 |
 
 在仓库根目录运行：
 

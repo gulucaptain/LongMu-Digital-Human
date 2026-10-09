@@ -1,0 +1,477 @@
+{
+  "planning_version": 1,
+  "project_id": "dry-eye-treatment-ep14-partial-v1",
+  "status": "partial_source_lecture_validatable_interaction_missing_assets",
+  "source": {
+    "path": "source/original.png",
+    "original_target_seconds": 150,
+    "original_storyboard_count": 10,
+    "complete_dialogue_sections": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "partial_section_5": "脉冲光前告知：治疗前问询暴晒、晒伤、光敏相关病史和用药；治疗区皮肤仅用示意图标注纹身与色素痣。截图无讲解台词。",
+    "missing_sections": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "complete_episode": false
+  },
+  "source_mapping": [
+    {
+      "section": 1,
+      "title": "治疗配合开场",
+      "source_text": "干眼物理治疗，做完就不用管了吗？既要选对项目，也要做好治疗前后的配合，后续用药、护理和复查都需要按医嘱安排。",
+      "shot_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "section": 2,
+      "title": "清洁与病史准备",
+      "source_text": "治疗前摘掉隐形眼镜，按要求清除眼妆。把近期眼部手术、感染、外伤，以及正在使用的药物，都要完整、准确地告诉医生。",
+      "shot_ids": [
+        3,
+        4
+      ]
+    },
+    {
+      "section": 3,
+      "title": "异常先评估",
+      "source_text": "如果有明显红痛、分泌物增多，或眼周皮肤破损，要先让医生评估是否需要延期。不要为了赶进度，把这些情况隐瞒下来。",
+      "shot_ids": [
+        5,
+        6
+      ]
+    },
+    {
+      "section": 4,
+      "title": "睑板腺按摩配合",
+      "source_text": "睑板腺按摩不是越痛越有效，明显疼痛要及时说。回家别模仿器械操作、用力挤眼皮；用了表面麻醉，感觉恢复前别揉眼。",
+      "shot_ids": [
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "adaptations": [
+    "原15秒分镜改成2–3个5–10秒模型片段；不保证原150秒总长。",
+    "讲解版明确采用现有医生图解释全部可见台词，原有交互未实现；交互意图完整保留在project.interaction.draft.json和素材清单。",
+    "为平衡预算拆句、少量复述原有配合/按医嘱/不自行模仿要点，未补写分镜五及后续医学结论。",
+    "分镜五图标覆盖、卡片准确标题与原稿问题字幕尚无通用叠加入口；当前仅口播字幕，摘要可选。"
+  ],
+  "medical_review": {
+    "status": "source_faithful_rewrite_not_independently_verified",
+    "new_medical_claims_added": false,
+    "required_before_publication": true
+  },
+  "voice_reference": {
+    "source": "assets/reference_audios/reference_audio_1.mp3",
+    "origin": "imported_reference",
+    "transcript": null,
+    "transcript_verified": false,
+    "x_vector_only_mode": true,
+    "all_shots_use_base_clone": true,
+    "output": "runs/default",
+    "validity": "ffprobe可读，时长已记录；非静音/声音清晰度/克隆质量未验收。",
+    "duration_seconds": 12.561995
+  },
+  "assumptions": [
+    "576×1024竖屏；统一声音；固定机位",
+    "讲解版女医生身份参考已查看，共用img_002.png；背景有眼球模型及两瓶道具，均不操作。",
+    "患者及互动场景尚无已核对素材，描述仅为补图需求。"
+  ],
+  "asset_requirements": [
+    {
+      "path": "assets/reference_images/consultation_cards_start.png",
+      "shot_ids": [
+        1,
+        2
+      ],
+      "status": "missing",
+      "must_show": "同一女医生在明亮诊室，患者坐在侧面看预约单；医生自身左手已持三张阶段卡，卡片分开可见，右手自然放松。准确文字后期添加。",
+      "action": "医生轻微倾斜展示卡片，下一段继续持卡讲解；不在单段内依次换三张卡。"
+    },
+    {
+      "path": "assets/reference_images/consultation_form_start.png",
+      "shot_ids": [
+        3,
+        4
+      ],
+      "status": "missing",
+      "must_show": "同一医生和患者坐在咨询桌两侧；患者已摘镜的闭合镜盒、眼妆清洁用品放桌边，医生自身右手已握笔，左手稳定问询单；嘴清晰可见。",
+      "action": "医生仅在问询单上做一次短记录；原稿摘镜/卸妆保留为台词与已完成准备状态，实际过程需另备审校素材。"
+    },
+    {
+      "path": "assets/reference_images/consultation_form_end.png",
+      "shot_ids": [
+        3
+      ],
+      "status": "missing",
+      "must_show": "以consultation_form_start实际首图为局部编辑基底，只改变右手笔尖和记录完成位置；脸、桌边、患者和道具不重新构图。",
+      "action": "短记录结束；配对图片导入后才核对是否能启用首尾双帧。"
+    },
+    {
+      "path": "assets/reference_images/assessment_start.png",
+      "shot_ids": [
+        5,
+        6
+      ],
+      "status": "missing",
+      "must_show": "同一医生与患者在明亮诊室咨询中景；患者双手自然放膝上，医生双手在桌面，眼周可见；不展示未审校的红痛病变或接触检查。",
+      "action": "医生以自然目光观察和口头解释；精细眼部/皮肤检查须经确认素材，原稿的精细检查意图保留在待补清单。"
+    },
+    {
+      "path": "assets/reference_images/feedback_start.png",
+      "shot_ids": [
+        7
+      ],
+      "status": "missing",
+      "must_show": "同一患者坐于诊室椅，医生在远侧背景；患者自身右手在膝上，眼部和双手没有器械接触。远景体现咨询反馈，不假装已验证的治疗装置。",
+      "action": "统一旁白，患者自身右手从膝上抬至肩侧反馈不适，左手保持膝上。专业按摩过程另需核对设备/器械与实拍素材。"
+    },
+    {
+      "path": "assets/reference_images/feedback_end.png",
+      "shot_ids": [
+        7
+      ],
+      "status": "missing",
+      "must_show": "以feedback_start实际首图局部编辑，仅改变患者自身右手/前臂到肩侧的抬手反馈状态；人物脸、服装、机位、背景和医生不变。",
+      "action": "抬手到肩侧；不按眼、不揉眼、不接触器械。"
+    },
+    {
+      "path": "assets/reference_images/home_care_start.png",
+      "shot_ids": [
+        8,
+        9
+      ],
+      "status": "missing",
+      "must_show": "同一患者在明亮整洁居家桌旁，双手已托住一张治疗后注意事项单下缘，脸与双手可见；眼睛与手分离。",
+      "action": "阅读说明单，统一旁白；不演示自行挤压或按摩。准确文字后期制作。"
+    }
+  ],
+  "object_registry": [
+    {
+      "object_id": "phase_cards",
+      "source": "planned_reference_image_missing",
+      "appearance": "三张诊疗阶段卡，准确文字后期添加",
+      "first_shot": 1,
+      "persist_in_shots": [
+        1,
+        2
+      ]
+    },
+    {
+      "object_id": "consultation_form",
+      "source": "planned_reference_image_missing",
+      "appearance": "纸质问询单和一支笔，准确文字后期添加",
+      "first_shot": 3,
+      "persist_in_shots": [
+        3,
+        4
+      ]
+    },
+    {
+      "object_id": "closed_lens_case_and_cleanser",
+      "source": "planned_reference_image_missing",
+      "appearance": "已摘镜后闭合镜盒与眼妆清洁用品，外观以审核后输入图为准",
+      "first_shot": 3,
+      "persist_in_shots": [
+        3,
+        4
+      ]
+    },
+    {
+      "object_id": "aftercare_sheet",
+      "source": "planned_reference_image_missing",
+      "appearance": "双手持治疗后注意事项单，准确文字后期添加",
+      "first_shot": 8,
+      "persist_in_shots": [
+        8,
+        9
+      ]
+    }
+  ],
+  "action_review": [
+    {
+      "shot_id": 1,
+      "operator": "医生自身",
+      "hand": "左手展示卡片",
+      "main_action": "The doctor already holds the three supplied phase cards by their lower edges in her own left hand. While delivering the given dialogue, gently tilt the same card group toward the viewer as one readable display action. Keep the right hand relaxed and the seated patient in the supplied pose. Use natural speaking lips, blinking and brief gaze changes; finish still holding the same cards without a staged hold.",
+      "contact_constraints": "手与眼部无接触；不展示未审核的治疗动作",
+      "side": "未指定治疗眼侧；不虚构侧别",
+      "completion_visible": "卡片展示方向清晰",
+      "asset_status": "missing"
+    },
+    {
+      "shot_id": 3,
+      "operator": "医生自身",
+      "hand": "右手握笔、左手支撑单据",
+      "main_action": "The doctor already holds the supplied pen in her own right hand above the consultation form, with her left hand supporting the sheet. While speaking, make one short recording stroke on the form and arrive at the reviewed target right-hand state near the final frame. Preserve the closed lens case and cleansing supplies on the table. The patient remains seated; this clip does not enact lens removal or makeup cleaning. Exact form text belongs to post-production.",
+      "contact_constraints": "手与眼部无接触；不展示未审核的治疗动作",
+      "side": "未指定治疗眼侧；不虚构侧别",
+      "completion_visible": "短记录完成",
+      "asset_status": "missing"
+    },
+    {
+      "shot_id": 7,
+      "operator": "患者自身",
+      "hand": "右手抬至肩侧，左手膝上",
+      "main_action": "With the supplied right hand initially on the lap, the seated patient raises their own right hand smoothly to shoulder height to signal discomfort. The left hand remains supported on the lap. The doctor stays in the supplied background position. Arrive at the reviewed raised-hand state near the final frame. The patient stays silent with closed lips; the single project voice provides off-screen narration. Hands stay separate from the eyes; this shot depicts feedback, not a massage procedure.",
+      "contact_constraints": "手与眼部无接触；不展示未审核的治疗动作",
+      "side": "未指定治疗眼侧；不虚构侧别",
+      "completion_visible": "右手抬至肩侧",
+      "asset_status": "missing"
+    },
+    {
+      "shot_id": 8,
+      "operator": "患者自身",
+      "hand": "双手持说明单",
+      "main_action": "The patient already supports the supplied aftercare sheet at its lower edge with both hands. Gently lower the gaze to read the same sheet, maintaining its grip and location. The patient remains silent with closed lips while the single project voice narrates. Both hands remain on the sheet, separated from the eyes. Continue natural breathing without demonstrating home treatment.",
+      "contact_constraints": "手与眼部无接触；不展示未审核的治疗动作",
+      "side": "未指定治疗眼侧；不虚构侧别",
+      "completion_visible": "视线朝向已有说明单",
+      "asset_status": "missing"
+    }
+  ],
+  "unsupported_requirements": [
+    "完整十分镜原文尚缺，不能交付完整150秒成片计划。",
+    "精细睑板腺器械按摩、治疗装置及配套护眼方式缺准确素材，不以提示词保证。",
+    "原稿患者实际摘镜、卸妆和眼周检查过程须另备已确认素材；草案仅保留准备完成状态/咨询观察。",
+    "动态图标、复杂示意动画和外部实拍插入暂无通用业务入口。"
+  ],
+  "review_policy": {
+    "during_generation": "automatic_no_manual_frame_gate",
+    "after_generation": "full_video_and_flagged_clips",
+    "input_asset_review": "before_generation",
+    "runtime_consumed": false
+  },
+  "stitch_plan": {
+    "lecture_chains": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8,
+        9
+      ]
+    ],
+    "lecture_chapter_cuts": [
+      3,
+      5,
+      7
+    ],
+    "lecture_reference_mode": "all_first_frame_only_no_target_tail",
+    "interaction_chains": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "interaction_two_frame_shots": [
+      3,
+      7
+    ],
+    "pair_review_status": "missing_not_verified",
+    "fallback": "不匹配尾图先重做局部编辑；仍不匹配则取消该目标尾图并同步修改动作、重新预览。",
+    "ending": "partial_excerpt_end_not_final_episode",
+    "joins": [
+      {
+        "from_shot": 1,
+        "to_shot": 2,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "from_shot": 2,
+        "to_shot": 3,
+        "type": "intentional_cut",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "from_shot": 3,
+        "to_shot": 4,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "from_shot": 4,
+        "to_shot": 5,
+        "type": "intentional_cut",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "from_shot": 5,
+        "to_shot": 6,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "from_shot": 6,
+        "to_shot": 7,
+        "type": "intentional_cut",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "from_shot": 7,
+        "to_shot": 8,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "from_shot": 8,
+        "to_shot": 9,
+        "type": "continuous",
+        "pause_target_seconds": [
+          0.2,
+          0.5
+        ]
+      }
+    ],
+    "runtime_consumed": false
+  },
+  "timing_review": {
+    "basis": "estimated_not_measured",
+    "strict_total_duration_guaranteed": false,
+    "tts_internal_silence_checked": false,
+    "long_padding_action": "TTS后按真实时长重分段；不以提示词消除留白；当前compose不自动裁剪。",
+    "total_video_seconds": 60.666666666666664,
+    "total_padded_tail_seconds": 4.613333333333332,
+    "shots": [
+      {
+        "id": 1,
+        "speech_seconds": 6.888888888888889,
+        "video_seconds": 7.291666666666667,
+        "padded_tail_seconds": 0.3227777777777776
+      },
+      {
+        "id": 2,
+        "speech_seconds": 5.777777777777778,
+        "video_seconds": 6.583333333333333,
+        "padded_tail_seconds": 0.7255555555555553
+      },
+      {
+        "id": 3,
+        "speech_seconds": 6.666666666666667,
+        "video_seconds": 7.291666666666667,
+        "padded_tail_seconds": 0.5449999999999999
+      },
+      {
+        "id": 4,
+        "speech_seconds": 5.333333333333333,
+        "video_seconds": 5.875,
+        "padded_tail_seconds": 0.4616666666666669
+      },
+      {
+        "id": 5,
+        "speech_seconds": 5.555555555555555,
+        "video_seconds": 5.875,
+        "padded_tail_seconds": 0.23944444444444457
+      },
+      {
+        "id": 6,
+        "speech_seconds": 6.444444444444445,
+        "video_seconds": 7.291666666666667,
+        "padded_tail_seconds": 0.7672222222222222
+      },
+      {
+        "id": 7,
+        "speech_seconds": 6.0,
+        "video_seconds": 6.583333333333333,
+        "padded_tail_seconds": 0.503333333333333
+      },
+      {
+        "id": 8,
+        "speech_seconds": 6.222222222222222,
+        "video_seconds": 6.583333333333333,
+        "padded_tail_seconds": 0.28111111111111065
+      },
+      {
+        "id": 9,
+        "speech_seconds": 6.444444444444445,
+        "video_seconds": 7.291666666666667,
+        "padded_tail_seconds": 0.7672222222222222
+      }
+    ]
+  },
+  "seedance_image_scripts": {
+    "directory": "seedance_prompts",
+    "manifest": "seedance_prompts/manifest.json",
+    "first_frames": 5,
+    "target_last_frames": 2,
+    "status": "prompts_delivered_images_missing",
+    "consolidated_text": "Seedance图像提示词.txt",
+    "doctor_identity_source": "assets/longmu/reference_images/img_002.png",
+    "doctor_identity_copy": "assets/reference_images/doctor.png",
+    "body_policy": "仅当前可见图像描述；路径、操作、参数及复用均在说明区；逐图文件为纯正文。"
+  },
+  "visual_defaults": {
+    "patient": "成年中国女性，深色齐肩直发、米色长袖上衣、深色长裤",
+    "basis": "原稿未指定，规划阶段明确默认；待首次实际图确认",
+    "doctor": "既有assets女医生，不重新设计"
+  },
+  "video_prompt_revision": {
+    "style": "concise",
+    "scope": "本项目讲解版及交互版",
+    "duration_control": "num_frames与输入音频，正文不含秒数",
+    "remaining_input_issues": [
+      "输入单据和瓶身已有文字；未修改图片。",
+      "背景医生原图有虚焦；未修改图片。"
+    ],
+    "validation": "两版项目格式与估算预算校验通过；GPU效果待服务器验收。"
+  }
+}

@@ -51,6 +51,7 @@ class RuntimeConfig:
     H3_SEED: int = 42
     H3_AUDIO_MODE: str = 'retake_preserve'
     H3_REVISION_TAG: str = 'local-FL2VA'
+    VIDEO_PROMPT_STYLE: str = 'standard'
     SAVE_PROGRESS_AFTER_EACH_CLIP: bool = False
     BURN_SUBTITLES: bool = True
     SHOW_KEYPOINTS: bool = False
@@ -58,7 +59,7 @@ class RuntimeConfig:
 PATH_KEYS = {'TTS_MODEL_PATH', 'BOOTSTRAP_MODEL_PATH', 'H3_MODEL_PATH', 'REFERENCE_SOURCE_AUDIO'}
 PROJECT_KEYS = {'TTS_SPEAKER','TTS_LANGUAGE','TTS_INSTRUCT','TTS_TEMPO','WIDTH','HEIGHT','FPS',
                 'MIN_VIDEO_SECONDS','MAX_VIDEO_SECONDS','AUDIO_LEAD_SECONDS','AUDIO_TAIL_SECONDS',
-                'BURN_SUBTITLES','SHOW_KEYPOINTS','SAVE_PROGRESS_AFTER_EACH_CLIP'}
+                'BURN_SUBTITLES','SHOW_KEYPOINTS','SAVE_PROGRESS_AFTER_EACH_CLIP','VIDEO_PROMPT_STYLE'}
 RUNTIME_KEYS = {f.name for f in fields(RuntimeConfig)} - {'PROJECT_ROOT','PACKAGE_DIR','H3_SOURCE_PATH','PLAN_PATH','ASSET_ROOT','OUTPUT_PATH'}
 
 def resolve_path(value, base):
@@ -108,6 +109,8 @@ def validate(config):
         raise ValueError('H3需要24fps，宽高必须为正的32倍数')
     if config.H3_STEPS <= 0:
         raise ValueError('h3_steps必须为正整数')
+    if config.VIDEO_PROMPT_STYLE not in ('standard', 'concise'):
+        raise ValueError('video_prompt_style需要standard或concise')
     return config
 
 def load_config(project=None, runtime=None, output=None):

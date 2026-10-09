@@ -61,9 +61,33 @@ def source_images(shot, plan):
     return start, end
 
 
+def concise_prompt(shot, has_end, plan):
+    """当前画面与单步动作；时长仅由模型帧数及音频条件控制。"""
+    character = plan['characters'][shot['scene']]
+    references = 'Use <Picture 1> as the starting image for [Shot 1].'
+    if has_end:
+        references += ' Use <Picture 2> as the ending image for the same shot.'
+    continuity = ('Continue from the supplied preceding final frame, retaining the visible pose and object positions.'
+                  if shot['continue_from'] else 'Begin with the supplied composition and pose.')
+    speaking = ('The on-camera speaker delivers the supplied dialogue with natural lip and jaw articulation. (S1) says:'
+                if character['speech_mode'] == 'on_camera' else
+                'The visible people remain silent with naturally closed lips. (S1) says in an off-screen voiceover:')
+    ending = 'Complete the stated movement in the supplied ending pose.' if has_end else ''
+    return f'''{references}
+
+integrated_multimodal_description: [Shot 1] Live-action medical education. {character['description']}. {continuity} {shot['action']} {speaking} <d>[{S.TTS_LANGUAGE}] {shot['text']}</d> {ending} {plan.get('visual_constraints', '')}
+
+overall_soundscape: Preserve the supplied voice, words, pacing and pauses. No additional voices or ambient sounds.
+
+non_diegetic_music: No background music.
+'''
+
+
 def make_prompt(shot, frames, speech_seconds, has_end, plan=None):
     duration = frames / S.FPS
     plan = plan or load_plan()
+    if S.VIDEO_PROMPT_STYLE == 'concise':
+        return concise_prompt(shot, has_end, plan)
     character = plan['characters'][shot['scene']]
     subject = character['description']
     continuity = 'Continue exactly from the supplied preceding final frame; do not reset the head, shoulders or hands.' if shot['continue_from'] else 'Begin in the exact supplied first-frame composition and pose.'
