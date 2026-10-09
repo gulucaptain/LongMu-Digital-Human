@@ -13,7 +13,7 @@
       "speech_mode": "voiceover"
     }
   },
-  "visual_constraints": "Do not pick up the bottles or eye model. Preserve existing props.",
+  "visual_constraints": "Fixed camera, one continuous shot. Preserve the supplied identities and existing object appearances. Move only the objects involved in the stated action. No additional people or objects. No added on-screen text.",
   "notice": "",
   "settings": {
     "width": 576,
@@ -24,7 +24,8 @@
     "tts_language": "Chinese",
     "tts_speaker": "Serena",
     "tts_instruct": "标准普通话，清晰自然的教育讲解，语气亲切，语速适中。",
-    "save_progress_after_each_clip": true
+    "save_progress_after_each_clip": true,
+    "video_prompt_style": "concise"
   },
   "shots": [
     {

@@ -20,7 +20,7 @@
 
 schema_version=1；project_id、characters、非空shots必填。每镜包含id、text、scene、action、keypoint、first_image、last_image、continue_from，id从1连续递增，text非空。asset_root建议显式为assets；图片真实存在、路径相对于素材目录且不能越界。顶层、角色、镜头未知字段均报错；兼容旧项目episode/notes以及镜头title仅作说明，不参与生成。规划信息放planning.json。续接源必须与本镜scene相同，图片中的身份仍须人工核对。
 
-内容settings白名单见longmu/config.py:PROJECT_KEYS：尺寸、fps、时长预算、首尾静音、字幕和进度开关、语言、首段声音指令、语速等。模型路径、参考音频/文字、Python环境、种子、步数和版本标记在TOML。未知settings项会报错。逐角色声音、scene_id、强制duration、chapter、原始video_prompt和逐词字幕不是当前接口。
+内容settings白名单见longmu/config.py:PROJECT_KEYS：尺寸、fps、时长预算、首尾静音、字幕和进度开关、语言、首段声音指令、语速及video_prompt_style等。video_prompt_style支持standard和concise；代码默认为standard保持兼容，skill新项目显式选择concise。concise没有数字时长或制作说明，长度仍由num_frames和音频条件控制。模型路径、参考音频/文字、Python环境、种子、步数和版本标记在TOML。未知settings项会报错。逐角色声音、scene_id、强制duration、chapter、原始video_prompt和逐词字幕不是当前接口。
 
 声音选择由skill先检查`assets/longmu/reference_audios/`：有MP3时优先指定参考录音，从第一镜开始使用Base克隆；无MP3才首次CustomVoice建立固定参考。完整选择、文字和部署步骤见[参考声音规则](voice-reference.md)。当前代码优先消费TOML显式参考，否则自动扫描共用目录及项目参考目录；文字可选，无文字用仅音色模式；导入会固定为运行目录内的WAV，Base后续复用同一个voice_clone_prompt。tts_speaker/tts_instruct只控制初次CustomVoice，不能控制Base每段。force保留固定声音；换声音用新运行目录。
 
@@ -28,7 +28,7 @@ speech.py首段复用分支仅限origin.mode=bootstrap_first_clip；外部录音
 
 24fps、尺寸32倍数；帧数17n+5向上对齐。默认5–10秒实际为124/141/158/175/192/209/226帧，5.167至9.417秒，默认首尾静音0.24秒，配音上限约9.177秒。真实预算调用longmu.media.audio.aligned_frames，不按字数确定最终帧数。speech_seconds为TTS文件时长，包含文件内部静音；补齐尾部=frames/fps-audio_lead_seconds-speech_seconds。默认尾部0.16秒不是总尾部留白上限。当前compose保留全部帧，没有自动去静音或按剪辑结束帧续接。具体规划见[拼接节奏与首尾帧设计](stitching-and-keyframes.md)。
 
-视频用FL2VA关键帧加retake_audio音频保留模式联合生成：last_image=null传[0]单首帧，指定目标图或same_as_start传[0,-1]首尾双帧；continue_from只决定首帧来源，也可与目标尾帧并用。日志/元数据统一的“首尾帧”标签不能证明用了双帧。再配回TTS。口型并非严格保证；不能为绕过报错改用纯后期配音并声称驱动有效。make_prompt固定机位、无剪切变焦；talking_head保持轻微表演，simple_action执行明确单步已有道具动作，不套用口播手部限制。speaking_action组合人物本人讲话口型与单步道具动作，允许自然视线、表情和肘腕/肩部变化，不套用旁白沉默或talking_head放松双手限制；脸在画面外时不改变构图来制造口型。精细操作仍未自动校验。正文前有首尾图时间对应行；台词在integrated段、保留音频说明在overall_soundscape段。音乐混音和外部实拍插入不是当前compose接口。
+视频用FL2VA关键帧加retake_audio音频保留模式联合生成：last_image=null传[0]单首帧，指定目标图或same_as_start传[0,-1]首尾双帧；continue_from只决定首帧来源，也可与目标尾帧并用。日志/元数据统一的“首尾帧”标签不能证明用了双帧。再配回TTS。口型并非严格保证；不能为绕过报错改用纯后期配音并声称驱动有效。make_prompt固定机位、无剪切变焦；talking_head保持轻微表演，simple_action执行明确单步已有道具动作，不套用口播手部限制。speaking_action组合人物本人讲话口型与单步道具动作，允许自然视线、表情和肘腕/肩部变化，不套用旁白沉默或talking_head放松双手限制；脸在画面外时不改变构图来制造口型。精细操作仍未自动校验。正文前说明首尾图关系；standard使用时间对应行，concise只说明起始/结束参考，不写秒数；台词在integrated段、保留音频说明在overall_soundscape段。音乐混音和外部实拍插入不是当前compose接口。
 
 ```bash
 python -m longmu plan --project scripts/my-course/project.json
